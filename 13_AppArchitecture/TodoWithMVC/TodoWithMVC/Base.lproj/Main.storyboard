@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodoWithMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-3o-YPQ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TODO_CELL" textLabel="iEs-ME-AfO" style="IBUITableViewCellStyleDefault" id="yjv-hq-ILG">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yjv-hq-ILG" id="eNz-Ka-Cgs">
+                                            <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEs-ME-AfO">
+                                                    <frame key="frameInset" minX="15" width="384" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DVh-dO-Ll5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yk5-QE-dzO"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CN3-YX-EHE">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mvg-oo-Zdr"/>
+                                    <barButtonItem systemItem="add" id="jCG-Dh-iCd">
+                                        <connections>
+                                            <action selector="addTodo:" destination="BYZ-38-t0r" id="PiO-mP-Yh7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CN3-YX-EHE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="66g-nx-9UG"/>
+                            <constraint firstItem="aTE-3o-YPQ" firstAttribute="top" secondItem="CN3-YX-EHE" secondAttribute="bottom" id="AZj-Rq-FU4"/>
+                            <constraint firstAttribute="trailing" secondItem="aTE-3o-YPQ" secondAttribute="trailing" id="Stx-Gr-waX"/>
+                            <constraint firstAttribute="trailing" secondItem="CN3-YX-EHE" secondAttribute="trailing" id="VHJ-Dy-ht0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aTE-3o-YPQ" secondAttribute="bottom" id="fl2-CY-8iz"/>
+                            <constraint firstItem="CN3-YX-EHE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rmY-8p-mcK"/>
+                            <constraint firstItem="aTE-3o-YPQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rxn-jc-6Es"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aTE-3o-YPQ" id="89c-fk-qgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="137.77173913043478"/>
+        </scene>
+    </scenes>
+</document>
