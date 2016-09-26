@@ -15,7 +15,7 @@ class TodoManager {
    static let DeleteNotification = Notification.Name("TodoDeleteNotification")
 
    static private var instance : TodoManager!
-   static var sharedManager : TodoManager {
+   static var shared : TodoManager {
       if nil == instance {
          instance = TodoManager()
       }

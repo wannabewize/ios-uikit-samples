@@ -14,19 +14,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
    var userInputChecker : UserInputChecker!
    
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return TodoManager.sharedManager.count
+      return TodoManager.shared.count
    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "TODO_CELL", for: indexPath)
-      let todo = TodoManager.sharedManager.todo(at: indexPath.row)!
+      let todo = TodoManager.shared.todo(at: indexPath.row)!
       cell.textLabel?.text = todo
       return cell
    }
    
    // 할일 삭제
    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-      TodoManager.sharedManager.remove(at: indexPath.row)
+      TodoManager.shared.remove(at: indexPath.row)
    }
 
    // 할일 추가 - 다이얼로그로 할일 입력
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       
       let okAction = UIAlertAction(title: "확인", style: .default) { (action : UIAlertAction) in
          let todo = dialog.textFields![0].text!
-         TodoManager.sharedManager.add(todo: todo)
+         TodoManager.shared.add(todo: todo)
       }
       
       // 사용자 입력 체크를 위해서 - 일단 Disable 상태로
