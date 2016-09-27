@@ -36,14 +36,28 @@ class TodoManager {
    func resolveAll() {
       let request : NSFetchRequest<Todo> = Todo.fetchRequest()
       
-      if let results = try? request.execute() {
-         print("resolve \(results.count) todos")
-         todoList = results
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      let container = appDelegate.persistentContainer
+      
+      if let todos = try? container.viewContext.fetch(request) {
+         self.todoList = todos
       }
       else {
-         print("result is nil")
-         todoList.removeAll()
+         print("NIL")
       }
+         
+      
+      
+//      container.viewContext.perform {
+//         if let todos = try? request.execute() {
+//            self.todoList = todos
+//            print("todo count : ", todos.count)
+//         }
+//         else {
+//            print("nil!")
+//            self.todoList.removeAll()
+//         }
+//      }
    }
    
    // 할일 삭제
@@ -72,7 +86,7 @@ class TodoManager {
       
       do {
          try container.viewContext.save()
-         print("Success!")
+         print("Save Success!")
          resolveAll()
       }
       catch let error {

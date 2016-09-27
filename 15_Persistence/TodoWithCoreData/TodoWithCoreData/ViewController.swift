@@ -60,6 +60,8 @@ class ViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       
+      print("Home Directory : ",NSHomeDirectory())
+      
       TodoManager.shared.resolveAll()
    }   
 }
