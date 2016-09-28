@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SyncAndAsync" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-ID-3BF">
+                                <items>
+                                    <barButtonItem title="Sync" id="ObJ-0H-Oy4">
+                                        <connections>
+                                            <action selector="handleSync:" destination="BYZ-38-t0r" id="iWD-li-CVY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Thread" id="S5C-Ew-KSJ">
+                                        <connections>
+                                            <action selector="handleThread:" destination="BYZ-38-t0r" id="TrR-bl-RQH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Operation" id="TDR-yg-8Rt">
+                                        <connections>
+                                            <action selector="handleOperation:" destination="BYZ-38-t0r" id="hC0-uo-zaI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Task" id="R4v-Je-Ltd">
+                                        <connections>
+                                            <action selector="handleTask:" destination="BYZ-38-t0r" id="rfr-7w-bTT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="tx6-RA-vG4">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="EdJ-pj-7BP">
+                                            <rect key="frame" x="261" y="7" width="118" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </slider>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0L-MY-GVs"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZHV-ID-3BF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1xc-qQ-P4h"/>
+                            <constraint firstItem="i0L-MY-GVs" firstAttribute="top" secondItem="ZHV-ID-3BF" secondAttribute="bottom" id="9GO-Z5-SGC"/>
+                            <constraint firstAttribute="trailing" secondItem="ZHV-ID-3BF" secondAttribute="trailing" id="Azg-Zq-Uou"/>
+                            <constraint firstItem="ZHV-ID-3BF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V4W-X5-AbG"/>
+                            <constraint firstItem="i0L-MY-GVs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lq6-9w-yQ0"/>
+                            <constraint firstAttribute="trailing" secondItem="i0L-MY-GVs" secondAttribute="trailing" id="mRG-lc-JrU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i0L-MY-GVs" secondAttribute="bottom" id="yq3-DR-Ay1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="i0L-MY-GVs" id="Ln2-Gx-8o0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-966" y="96"/>
+        </scene>
+    </scenes>
+</document>
