@@ -11,8 +11,8 @@
 		2C95AE571E11195500C840E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AE551E11195500C840E1 /* Main.storyboard */; };
 		2C95AE591E11195500C840E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AE581E11195500C840E1 /* Assets.xcassets */; };
 		2C95AE5C1E11195500C840E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AE5A1E11195500C840E1 /* LaunchScreen.storyboard */; };
-		2C95AE651E11196300C840E1 /* SeoulHangangM.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AE631E11196300C840E1 /* SeoulHangangM.otf */; };
 		2C95AE661E11196300C840E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C95AE641E11196300C840E1 /* ViewController.swift */; };
+		2C95AE681E112D4100C840E1 /* SeoulHangangM.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AE671E112D4100C840E1 /* SeoulHangangM.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		2C95AE581E11195500C840E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C95AE5B1E11195500C840E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C95AE5D1E11195500C840E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C95AE631E11196300C840E1 /* SeoulHangangM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SeoulHangangM.otf; sourceTree = "<group>"; };
 		2C95AE641E11196300C840E1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C95AE671E112D4100C840E1 /* SeoulHangangM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SeoulHangangM.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		2C95AE501E11195500C840E1 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
+				2C95AE671E112D4100C840E1 /* SeoulHangangM.otf */,
 				2C95AE511E11195500C840E1 /* AppDelegate.swift */,
-				2C95AE631E11196300C840E1 /* SeoulHangangM.otf */,
 				2C95AE641E11196300C840E1 /* ViewController.swift */,
 				2C95AE551E11195500C840E1 /* Main.storyboard */,
 				2C95AE581E11195500C840E1 /* Assets.xcassets */,
@@ -127,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C95AE5C1E11195500C840E1 /* LaunchScreen.storyboard in Resources */,
-				2C95AE651E11196300C840E1 /* SeoulHangangM.otf in Resources */,
+				2C95AE681E112D4100C840E1 /* SeoulHangangM.otf in Resources */,
 				2C95AE591E11195500C840E1 /* Assets.xcassets in Resources */,
 				2C95AE571E11195500C840E1 /* Main.storyboard in Resources */,
 			);
@@ -303,6 +303,7 @@
 				2C95AE621E11195500C840E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
