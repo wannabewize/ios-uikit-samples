@@ -16,6 +16,8 @@
 		2C95AEA21E11384000C840E1 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AE9F1E11384000C840E1 /* image.png */; };
 		2C95AEA31E11384000C840E1 /* image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AEA01E11384000C840E1 /* image@2x.png */; };
 		2C95AEA41E11384000C840E1 /* image@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AEA11E11384000C840E1 /* image@3x.png */; };
+		2C95AEC51E11447000C840E1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AEC31E11447000C840E1 /* icon@2x.png */; };
+		2C95AEC61E11447000C840E1 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95AEC41E11447000C840E1 /* icon@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2C95AE9F1E11384000C840E1 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		2C95AEA01E11384000C840E1 /* image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image@2x.png"; sourceTree = "<group>"; };
 		2C95AEA11E11384000C840E1 /* image@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image@3x.png"; sourceTree = "<group>"; };
+		2C95AEC31E11447000C840E1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		2C95AEC41E11447000C840E1 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		2C95AE761E11344400C840E1 /* ImageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				2C95AEC31E11447000C840E1 /* icon@2x.png */,
+				2C95AEC41E11447000C840E1 /* icon@3x.png */,
 				2C95AE9E1E11384000C840E1 /* images */,
 				2C95AE9C1E1137AD00C840E1 /* images2 */,
 				2C95AE771E11344400C840E1 /* AppDelegate.swift */,
@@ -143,6 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C95AEC61E11447000C840E1 /* icon@3x.png in Resources */,
+				2C95AEC51E11447000C840E1 /* icon@2x.png in Resources */,
 				2C95AEA31E11384000C840E1 /* image@2x.png in Resources */,
 				2C95AEA41E11384000C840E1 /* image@3x.png in Resources */,
 				2C95AE821E11344400C840E1 /* LaunchScreen.storyboard in Resources */,
@@ -323,6 +331,7 @@
 				2C95AE881E11344400C840E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
