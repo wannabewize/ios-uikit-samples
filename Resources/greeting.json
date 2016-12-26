@@ -1,0 +1,7 @@
+{
+  "greeting" : "Good morning",
+  "when" : "morning",
+  "who" : {
+    "name" : "Jobs"
+  }
+}

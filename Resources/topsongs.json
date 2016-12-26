@@ -1,0 +1,31 @@
+{
+  "feed": {
+    "entry": [
+      {
+        "name": "7 Years",
+        "artist": "Lukas Graham",
+        "image": "http://is5.mzstatic.com/image/thumb/Music69/v4/1f/57/08/1f57082e-ee7e-dcb7-a73e-ba1f3468211d/093624920496.jpg/60x60bb-85.jpg"
+      },
+      {
+        "name": "Humble and Kind",
+        "artist": "Tim McGraw",
+        "image": "http://is5.mzstatic.com/image/thumb/Music3/v4/d5/6b/12/d56b1283-4fd5-a3c5-51a2-c88f4c27791d/UMG_cvrart_00843930019823_01_RGB72_1800x1800_15UMDIM00558.jpg/60x60bb-85.jpg"
+      },
+      {
+        "name": "My House",
+        "artist": "Flo Rida",
+        "image": "http://is1.mzstatic.com/image/thumb/Music3/v4/74/b1/93/74b19326-e155-0aea-02b2-da34a9d597b4/075679930903.jpg/60x60bb-85.jpg"
+      },
+      {
+        "name": "Lights Come On",
+        "artist": "Jason Aldean",
+        "image": "http://is3.mzstatic.com/image/thumb/Music49/v4/cc/ae/25/ccae256f-8dab-4ffe-d34d-b16f3ee9f24a/886445831320.jpg/60x60bb-85.jpg"
+      },
+      {
+        "name": "Never Forget You",
+        "artist": "Zara Larsson & MNEK",
+        "image": "http://is5.mzstatic.com/image/thumb/Music3/v4/2f/be/a2/2fbea281-3380-f4eb-0343-3c7fe1d5e4b6/886445491074.jpg/60x60bb-85.jpg"
+      }
+    ]
+  }
+}
