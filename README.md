@@ -14,7 +14,7 @@ iOS 10 Samples.
 - ImageFiles : 이미지 파일과 이미지 뷰
 - ImageAssets : 애셋을 이용한 이미지 리소스 다루기
 - ContentMode : 뷰 컨텐트 모드
-- Stretch : 뷰 스트레칭. 슬라이스
+- ViewStretch : 뷰 스트레칭. 슬라이싱
 
 ## 04_Layout
 
