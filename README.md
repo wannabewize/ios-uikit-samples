@@ -22,10 +22,17 @@ iOS 10 Samples.
 - AutoLayout : 제약조건을 이용한 오토레이아웃
 - StackView : IB를 이용한 스택뷰
 - AdaptiveUI : 적응형 UI 
-
-
+- AutoLayoutByCode : 코드를 이용한 오토레이아웃
+- StackViewByCode : 코드를 이용한 스택뷰
 
 ## 05_InteractiveScene
+
+- Buttons : 버튼 
+- ButtonAndAction : 버튼과 이벤트 다루기.
+- ButtonAndActionByCode : 코드로 버튼과 이벤트 다루기
+- SegmentedControl : 코드로 세그먼디트 컨트롤 다루기
+- Toolbar : 코드로 툴바 다루기
+- NumberChange : 슬라이더와 스테퍼 예제
 
 ## 06_SceneWithText
 
