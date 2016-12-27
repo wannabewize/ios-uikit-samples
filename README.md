@@ -33,8 +33,14 @@ iOS 10 Samples.
 - SegmentedControl : 코드로 세그먼디트 컨트롤 다루기
 - Toolbar : 코드로 툴바 다루기
 - NumberChange : 슬라이더와 스테퍼 예제
+- ActivityIndicate : 스위치와 액티비티 인디게이터 예제
+- ColorSlider : 슬라이더를 이용한 색깔 변화
 
 ## 06_SceneWithText
+
+- TextField : 텍스트필드
+- TextEditing : 편집 이벤트 다루기
+- TextFieldAndKeyboard : 키보드 이벤트 알림과 텍스트필드
 
 ## 07_Dialog
 
