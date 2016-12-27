@@ -18,6 +18,9 @@ iOS 10 Samples.
 
 ## 04_Layout
 
+- FrameLayout : 프레임 기반의 레이아웃. 기기 회전에 대응하지 못한다.
+
+
 ## 05_InteractiveScene
 
 ## 06_SceneWithText
