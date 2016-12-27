@@ -19,6 +19,8 @@ iOS 10 Samples.
 ## 04_Layout
 
 - FrameLayout : 프레임 기반의 레이아웃. 기기 회전에 대응하지 못한다.
+- AutoLayout : 제약조건을 이용한 오토레이아웃
+- StackView : IB를 이용한 스택뷰
 
 
 ## 05_InteractiveScene
