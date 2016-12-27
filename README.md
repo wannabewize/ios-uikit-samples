@@ -44,7 +44,17 @@ iOS 10 Samples.
 
 ## 07_Dialog
 
-## 08_ScrollView
+- Dialog : 얼럿 컨트롤러를 이용한 다이얼로그
+
+## 08_Picker
+
+- DatePicker : 날짜 피커
+- Timer : 날짜 피커를 이용한 타이머
+- PickerView : 피커
+- PickerAndArray : 피커와 배열
+- ImagePicker : 이미지 뷰 기반의 피커
+
+## 09_ScrollView
 
 ## 09_ListScene
 
