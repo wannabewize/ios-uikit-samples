@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageView.isUserInteractionEnabled = true
+        
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
         imageView.addGestureRecognizer(pinchGesture)
         
@@ -29,35 +31,33 @@ class ViewController: UIViewController {
     
     func handlePinch(_ gesture : UIPinchGestureRecognizer) {
         let scale = gesture.scale
-        let transform = CGAffineTransform.scalesBy(imageView.transform, scale, scale)
-        imageView.layer.setAffineTransform(transform)
+        
+        imageView.transform = imageView.transform.scaledBy(x: scale, y: scale)
+
         
         // 연속된 제스처 이벤트이므로 다시 초기화
         gesture.scale = 1.0
     }
     
     func handleTap(_ gesture : UITapGestureRecognizer) {
-        let point = gesture.locationInView(gesture.view)
+        let point = gesture.location(in: gesture.view)
         print("탭 좌표 : \(point)")
     }
     
     func handleRotate(_ gesture : UIRotationGestureRecognizer) {
         print("회전")
         let rotation = gesture.rotation
-        let transform = CGAffineTransformRotate(imageView.transform, rotation)
-        imageView.layer.setAffineTransform(transform)
+        imageView.transform = imageView.transform.rotated(by: rotation)
         
         // 연속된 제스처 이벤트이므로 초기화
         gesture.rotation = 0.0
     }
     
     func handlePan(_ gesture : UIPanGestureRecognizer) {
-        let translation = gesture.translationInView(gesture.view!)
-        let transform = CGAffineTransformTranslate(imageView.transform, translation.x, translation.y)
-        
-        imageView.layer.setAffineTransform(transform)
+        let translation = gesture.translation(in: gesture.view!)
+        imageView.transform = imageView.transform.translatedBy(x: translation.x, y: translation.y)
         // 초기화
-        gesture.setTranslation(CGPointZero, inView: gesture.view)
+        gesture.setTranslation(CGPoint.zero, in: gesture.view)
     }
 
 }
