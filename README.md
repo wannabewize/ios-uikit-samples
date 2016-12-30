@@ -68,6 +68,8 @@ iOS 10 Samples.
 - Gesture : 제스처 인식기를 이용한 이미지 끌기, 회전, 확대/축소 예제
 - PanAndSwipeGesture : Pan, Swift 제스처 인식기와 제스처 상태값
 - TouchAndGesture : 제스처 인식기와 터치 API 사용 설정
+- DynamicsAttachment : 다이나믹스 - 연결 행위 예제
+
 
 ## 11_MultiScene
 
