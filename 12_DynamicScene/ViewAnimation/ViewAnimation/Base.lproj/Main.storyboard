@@ -40,6 +40,12 @@
                                             <action selector="moveBlock:" destination="BYZ-38-t0r" id="xUn-hA-X18"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AlE-Ej-dah"/>
+                                    <barButtonItem title="Spring" id="ibV-e0-VCM">
+                                        <connections>
+                                            <action selector="springBlock:" destination="BYZ-38-t0r" id="gaI-at-xs8"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zM4-1L-FPB"/>
                                     <barButtonItem title="확대/축소" id="jbt-Rj-eYn">
                                         <connections>
