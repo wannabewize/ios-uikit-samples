@@ -69,7 +69,8 @@ iOS 10 Samples.
 - PanAndSwipeGesture : Pan, Swift 제스처 인식기와 제스처 상태값
 - TouchAndGesture : 제스처 인식기와 터치 API 사용 설정
 - DynamicsAttachment : 다이나믹스 - 연결 행위 예제
-
+- FallingBlock : 다이나믹스 - 중력과 충돌 효과 예제
+- Drawing : 커스텀 뷰 생성과 그리기
 
 ## 11_MultiScene
 
