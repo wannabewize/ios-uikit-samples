@@ -66,6 +66,7 @@ iOS 10 Samples.
 - Transition : 트랜지션
 - Touch : 터치를 이용한 이미지 끌기 예제
 - Gesture : 제스처 인식기를 이용한 이미지 끌기, 회전, 확대/축소 예제
+- PanAndSwipeGesture : Pan, Swift 제스처 인식기와 제스처 상태값
 
 
 ## 11_MultiScene
