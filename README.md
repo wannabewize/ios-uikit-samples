@@ -71,6 +71,8 @@ iOS 10 Samples.
 - DynamicsAttachment : 다이나믹스 - 연결 행위 예제
 - FallingBlock : 다이나믹스 - 중력과 충돌 효과 예제
 - Drawing : 커스텀 뷰 생성과 그리기
+- BezierPath : 베이저패스를 이용한 그리기
+- TouchDrawing : 터치와 그리기
 
 ## 11_MultiScene
 
