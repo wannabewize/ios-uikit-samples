@@ -1,9 +1,5 @@
 //
-//  ViewController.swift
-//  Gesture
-//
-//  Created by Jaehoon Lee on 2016. 12. 28..
-//  Copyright © 2016년 vanillastep. All rights reserved.
+// 제스처
 //
 
 import UIKit
@@ -27,6 +23,14 @@ class ViewController: UIViewController {
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
         imageView.addGestureRecognizer(panGesture)
+        
+        let edgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenPan))
+        edgeGesture.edges = .left
+        self.view.addGestureRecognizer(edgeGesture)
+    }
+    
+    func handleScreenPan(_ gesture : UIScreenEdgePanGestureRecognizer) {
+        print("Screen pan")
     }
     
     func handlePinch(_ gesture : UIPinchGestureRecognizer) {
@@ -45,7 +49,6 @@ class ViewController: UIViewController {
     }
     
     func handleRotate(_ gesture : UIRotationGestureRecognizer) {
-        print("회전")
         let rotation = gesture.rotation
         imageView.transform = imageView.transform.rotated(by: rotation)
         
