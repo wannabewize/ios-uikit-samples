@@ -1,9 +1,5 @@
 //
-//  ViewController.swift
-//  Touch
-//
-//  Created by Jaehoon Lee on 2016. 12. 28..
-//  Copyright © 2016년 vanillastep. All rights reserved.
+// 터치
 //
 
 import UIKit
@@ -23,6 +19,8 @@ class ViewController: UIViewController {
         
         if imageView.frame.contains(point) {
             holdingImage = true
+            // 이미지 확대
+            imageView.transform = imageView.transform.scaledBy(x: 1.1, y: 1.1)
         }
         else {
             holdingImage = false
@@ -41,6 +39,15 @@ class ViewController: UIViewController {
     
     // 터치 끝
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if holdingImage {
+            // 원래 크기로 되돌리기
+            imageView.transform = CGAffineTransform.identity
+            holdingImage = false
+        }
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("Touch Cancalled")
     }
 }
 

@@ -1,9 +1,5 @@
 //
-//  ViewController.swift
-//  ViewAnimation
-//
-//  Created by Jaehoon Lee on 2016. 12. 28..
-//  Copyright © 2016년 vanillastep. All rights reserved.
+// 뷰의 속성 변화를 이용한 애니메이션
 //
 
 import UIKit
@@ -53,7 +49,5 @@ class ViewController: UIViewController {
         }
 
     }
-
-
 }
 
