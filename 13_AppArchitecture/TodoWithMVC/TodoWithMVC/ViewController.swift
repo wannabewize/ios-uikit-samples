@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
    }
 
    // 할일 추가 - 다이얼로그로 할일 입력
-   @IBAction func addTodo(_ sender: AnyObject) {
+   @IBAction func addTodo(_ sender: Any) {
       let dialog = UIAlertController(title: "새 할일 추가", message: nil, preferredStyle: .alert)
 
       dialog.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))

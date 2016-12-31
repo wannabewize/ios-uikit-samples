@@ -61,7 +61,7 @@ iOS 10 Samples.
 - EmbeddingScene : 씬 내장 방식으로 UI작성하기
 - ScrollViewPaging : 페이지 기능을 이용한 UI작성
 
-## 09_ListScene
+## 10_ListScene
 
 - BasicTable : 테이블뷰 기본
 - DynamicCellHeight : 셀 높이 동적 자동 설정
@@ -71,11 +71,11 @@ iOS 10 Samples.
 - StaticCell : 정적 테이블뷰를 이용한 정적 테이블
 - PullToRefresh : 당겨서 다시 읽는 테이블뷰
 
-## 09_GridScene
+## 11_GridScene
 
 - CollectionView : 콜렉션 뷰
 
-## 10_DynamicScene
+## 12_DynamicScene
 
 - ViewAnimation : 뷰 속성 변화를 이용한 애니메이션
 - Transition : 트랜지션
@@ -89,9 +89,13 @@ iOS 10 Samples.
 - BezierPath : 베이저패스를 이용한 그리기
 - TouchDrawing : 터치와 그리기
 
-## 11_MultiScene
+## 13_AppArchitecture
 
-## 12_AppArchitecture
+- SceneChange : 스토리보드 다루기. Window의 RootViewController를 이용한 씬 전환.
+- TodoWithMVC : MVC를 적용한 할일 관리. TodoManager 모델
+
+## 14_MultiScene
+
 
 ## 13_Persistence
 
