@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModalScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인 씬" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZB-tw-oFt">
+                                <rect key="frame" x="124.5" y="60" width="71.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-qD-hWc">
+                                <rect key="frame" x="16" y="220" width="288" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-5F-8nW">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Show Modal1(Segue)">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="b6j-MT-lDI" kind="presentation" identifier="MODAL_SEGUE" id="WVO-ov-J18"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLX-M5-xmd">
+                                        <rect key="frame" x="0.0" y="44" width="288" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Show Modal2(Segue 실행)">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showModal2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYX-88-JSc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-25-uw7">
+                                        <rect key="frame" x="0.0" y="88" width="288" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Show Modal3(코드)">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showModal3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVb-uI-MsO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cae-RV-O1B">
+                                <rect key="frame" x="16" y="120" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wh3-qD-hWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Cv-s9-wc4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wh3-qD-hWc" secondAttribute="trailing" id="1Jb-rR-MbS"/>
+                            <constraint firstItem="cae-RV-O1B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="6t5-Bz-UTL"/>
+                            <constraint firstItem="Wh3-qD-hWc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="Ru8-wQ-yxw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cae-RV-O1B" secondAttribute="trailing" id="SY1-HY-wXQ"/>
+                            <constraint firstItem="FZB-tw-oFt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="VRT-Dn-oGp"/>
+                            <constraint firstItem="FZB-tw-oFt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHs-WV-r49"/>
+                            <constraint firstItem="cae-RV-O1B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xne-Ta-om3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="168"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="AtU-Pq-Aif">
+            <objects>
+                <viewController storyboardIdentifier="MODAL_VC" id="b6j-MT-lDI" customClass="ModalViewController" customModule="ModalScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="04x-kv-064"/>
+                        <viewControllerLayoutGuide type="bottom" id="uLo-2h-Fqi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ywT-vX-Ynb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57P-KU-qhZ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hwM-jJ-KFb"/>
+                                    <barButtonItem systemItem="done" id="F6D-9y-KN2">
+                                        <connections>
+                                            <action selector="handleDone:" destination="b6j-MT-lDI" id="tVc-wp-Kdk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="모달 씬" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivt-Ch-Jqw">
+                                <rect key="frame" x="126" y="131" width="71.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-W9-oOC">
+                                <rect key="frame" x="16" y="200" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ivt-Ch-Jqw" firstAttribute="top" secondItem="04x-kv-064" secondAttribute="bottom" constant="100" id="0uE-0S-Rjo"/>
+                            <constraint firstItem="8Ye-W9-oOC" firstAttribute="leading" secondItem="ywT-vX-Ynb" secondAttribute="leadingMargin" id="3N1-qt-Gcn"/>
+                            <constraint firstItem="57P-KU-qhZ" firstAttribute="leading" secondItem="ywT-vX-Ynb" secondAttribute="leading" id="GPW-D5-7Qj"/>
+                            <constraint firstItem="57P-KU-qhZ" firstAttribute="top" secondItem="04x-kv-064" secondAttribute="bottom" id="Q96-h3-PIH"/>
+                            <constraint firstAttribute="trailing" secondItem="57P-KU-qhZ" secondAttribute="trailing" id="SWb-1P-DQP"/>
+                            <constraint firstItem="8Ye-W9-oOC" firstAttribute="top" secondItem="04x-kv-064" secondAttribute="bottom" constant="180" id="d8j-ml-Oeq"/>
+                            <constraint firstItem="ivt-Ch-Jqw" firstAttribute="centerX" secondItem="ywT-vX-Ynb" secondAttribute="centerX" id="k6h-aO-Djl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Ye-W9-oOC" secondAttribute="trailing" id="qcy-p9-HnG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5a-yB-oqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3649" y="349"/>
+        </scene>
+    </scenes>
+</document>
