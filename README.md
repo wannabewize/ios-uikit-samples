@@ -101,7 +101,10 @@ iOS 10 Samples.
 - MasterDetail : 마스터-디테일 예제. 목록 형태의 마스터에서 선택한 상세 정보를 출력하는 디테일 씬 예제
 - TabBasedApp : 탭 기반의 씬 구조 예제
 
-## 13_Persistence
+## 15_Persistence
+
+- BundleData : 샌드박스 경로와 번들 내 데이터를 초기 데이터로 사용하는 예제
+- DataSave : 기본 데이터 타입 저장
 
 ## 14_Networking
 
