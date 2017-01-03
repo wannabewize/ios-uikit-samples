@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2852C01E1C1CAA004DA95A /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2852BE1E1C1CAA004DA95A /* Todo+CoreDataClass.swift */; };
+		2C2852C11E1C1CAA004DA95A /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2852BF1E1C1CAA004DA95A /* Todo+CoreDataProperties.swift */; };
 		2C3966111D99603000E49F87 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3966101D99603000E49F87 /* ComposeViewController.swift */; };
 		2C8791AD1D98E2FC0021B531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791AC1D98E2FC0021B531 /* AppDelegate.swift */; };
 		2C8791AF1D98E2FC0021B531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791AE1D98E2FC0021B531 /* ViewController.swift */; };
@@ -14,12 +16,12 @@
 		2C8791B51D98E2FC0021B531 /* TodoWithCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791B31D98E2FC0021B531 /* TodoWithCoreData.xcdatamodeld */; };
 		2C8791B71D98E2FC0021B531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8791B61D98E2FC0021B531 /* Assets.xcassets */; };
 		2C8791BA1D98E2FC0021B531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8791B81D98E2FC0021B531 /* LaunchScreen.storyboard */; };
-		2C8791C31D98E3770021B531 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791C11D98E3770021B531 /* Todo+CoreDataClass.swift */; };
-		2C8791C41D98E3770021B531 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791C21D98E3770021B531 /* Todo+CoreDataProperties.swift */; };
 		2C8791C61D98E3BD0021B531 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791C51D98E3BD0021B531 /* TodoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2852BE1E1C1CAA004DA95A /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Todo+CoreDataClass.swift"; path = "TodoWithCoreData/Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2C2852BF1E1C1CAA004DA95A /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Todo+CoreDataProperties.swift"; path = "TodoWithCoreData/Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C3966101D99603000E49F87 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		2C8791A91D98E2FC0021B531 /* TodoWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8791AC1D98E2FC0021B531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +31,6 @@
 		2C8791B61D98E2FC0021B531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8791B91D98E2FC0021B531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C8791BB1D98E2FC0021B531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C8791C11D98E3770021B531 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2C8791C21D98E3770021B531 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C8791C51D98E3BD0021B531 /* TodoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +48,8 @@
 		2C8791A01D98E2FC0021B531 = {
 			isa = PBXGroup;
 			children = (
+				2C2852BE1E1C1CAA004DA95A /* Todo+CoreDataClass.swift */,
+				2C2852BF1E1C1CAA004DA95A /* Todo+CoreDataProperties.swift */,
 				2C8791AB1D98E2FC0021B531 /* TodoWithCoreData */,
 				2C8791AA1D98E2FC0021B531 /* Products */,
 			);
@@ -64,8 +66,6 @@
 		2C8791AB1D98E2FC0021B531 /* TodoWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				2C8791C11D98E3770021B531 /* Todo+CoreDataClass.swift */,
-				2C8791C21D98E3770021B531 /* Todo+CoreDataProperties.swift */,
 				2C8791AC1D98E2FC0021B531 /* AppDelegate.swift */,
 				2C8791AE1D98E2FC0021B531 /* ViewController.swift */,
 				2C8791B01D98E2FC0021B531 /* Main.storyboard */,
@@ -106,7 +106,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jaehoon Lee";
 				TargetAttributes = {
 					2C8791A81D98E2FC0021B531 = {
@@ -153,11 +153,11 @@
 			files = (
 				2C8791B51D98E2FC0021B531 /* TodoWithCoreData.xcdatamodeld in Sources */,
 				2C8791C61D98E3BD0021B531 /* TodoManager.swift in Sources */,
-				2C8791C31D98E3770021B531 /* Todo+CoreDataClass.swift in Sources */,
 				2C8791AF1D98E2FC0021B531 /* ViewController.swift in Sources */,
+				2C2852C11E1C1CAA004DA95A /* Todo+CoreDataProperties.swift in Sources */,
 				2C8791AD1D98E2FC0021B531 /* AppDelegate.swift in Sources */,
-				2C8791C41D98E3770021B531 /* Todo+CoreDataProperties.swift in Sources */,
 				2C3966111D99603000E49F87 /* ComposeViewController.swift in Sources */,
+				2C2852C01E1C1CAA004DA95A /* Todo+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +201,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -251,6 +252,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

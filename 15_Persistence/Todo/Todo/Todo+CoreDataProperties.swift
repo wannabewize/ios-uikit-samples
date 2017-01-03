@@ -1,9 +1,10 @@
 //
 //  Todo+CoreDataProperties.swift
-//  TodoWithCoreData
+//  Todo
 //
 //  Created by Jaehoon Lee on 2017. 1. 4..
-//  Copyright © 2017년 Jaehoon Lee. All rights reserved.
+//  Copyright © 2017년 vanillastep. All rights reserved.
+//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
@@ -16,7 +17,7 @@ extension Todo {
         return NSFetchRequest<Todo>(entityName: "Todo");
     }
 
-    @NSManaged public var dueDate: NSDate?
     @NSManaged public var title: String?
+    @NSManaged public var dueDate: NSDate?
 
 }
