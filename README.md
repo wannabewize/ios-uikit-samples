@@ -96,6 +96,10 @@ iOS 10 Samples.
 
 ## 14_MultiScene
 
+- Modal : 모방 방식으로 씬 전환. 데이터 교환
+- NaviBasedApp : 내비게이션 컨트롤러를 이용한 씬 전환 예제
+- MasterDetail : 마스터-디테일 예제. 목록 형태의 마스터에서 선택한 상세 정보를 출력하는 디테일 씬 예제
+- TabBasedApp : 탭 기반의 씬 구조 예제
 
 ## 13_Persistence
 

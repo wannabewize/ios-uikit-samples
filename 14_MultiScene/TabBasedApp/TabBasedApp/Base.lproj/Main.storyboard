@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EDd-B8-xKC">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scene!-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabBasedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNg-tE-cHR">
+                                <rect key="frame" x="139" y="70" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2N4-a3-6OG">
+                                <rect key="frame" x="16" y="120" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldDidEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="fu8-CD-mP7"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2N4-a3-6OG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8Lc-ji-X0u"/>
+                            <constraint firstItem="SNg-tE-cHR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Lrn-Lz-skT"/>
+                            <constraint firstItem="2N4-a3-6OG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Txs-kK-yPY"/>
+                            <constraint firstItem="2N4-a3-6OG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W7r-bv-b3V"/>
+                            <constraint firstItem="SNg-tE-cHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rSq-Rc-3ov"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scene!" image="1.png" id="xrV-eM-O87"/>
+                    <connections>
+                        <outlet property="label" destination="SNg-tE-cHR" id="FF1-9s-RDh"/>
+                        <outlet property="textField" destination="2N4-a3-6OG" id="IVh-wV-9UB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="64"/>
+        </scene>
+        <!--Scene2-->
+        <scene sceneID="i4s-9P-GQX">
+            <objects>
+                <viewController id="WQV-ad-Cjr" customClass="ViewController" customModule="TabBasedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vaa-pZ-pf1"/>
+                        <viewControllerLayoutGuide type="bottom" id="tZU-4x-zcP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6xJ-Qd-E6F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaS-4z-c2C">
+                                <rect key="frame" x="16" y="70" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldDidEndOnExit:" destination="WQV-ad-Cjr" eventType="editingDidEndOnExit" id="aD8-es-2hs"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmz-iM-dUw">
+                                <rect key="frame" x="141.5" y="170" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uaS-4z-c2C" firstAttribute="top" secondItem="vaa-pZ-pf1" secondAttribute="bottom" constant="50" id="5Am-AN-ZNr"/>
+                            <constraint firstItem="uaS-4z-c2C" firstAttribute="leading" secondItem="6xJ-Qd-E6F" secondAttribute="leadingMargin" id="9Pp-pe-tw6"/>
+                            <constraint firstItem="Pmz-iM-dUw" firstAttribute="centerX" secondItem="6xJ-Qd-E6F" secondAttribute="centerX" id="Yyx-Rb-Urr"/>
+                            <constraint firstItem="Pmz-iM-dUw" firstAttribute="top" secondItem="vaa-pZ-pf1" secondAttribute="bottom" constant="150" id="rYg-yh-rvt"/>
+                            <constraint firstItem="uaS-4z-c2C" firstAttribute="trailing" secondItem="6xJ-Qd-E6F" secondAttribute="trailingMargin" id="zg9-LA-R8k"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scene2" image="2.png" id="uLR-f7-RjS"/>
+                    <connections>
+                        <outlet property="label" destination="Pmz-iM-dUw" id="5lG-FB-gMs"/>
+                        <outlet property="textField" destination="uaS-4z-c2C" id="8Lv-A6-nrn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwk-eE-3kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068.75" y="852.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6Tk-7a-hGU">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EDd-B8-xKC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="689-L6-zhY">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wBD-0K-yVd"/>
+                        <segue destination="WQV-ad-Cjr" kind="relationship" relationship="viewControllers" id="gIK-CL-Uv1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gf-ZS-eHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.png" width="20" height="25"/>
+        <image name="2.png" width="20" height="25"/>
+    </resources>
+</document>
