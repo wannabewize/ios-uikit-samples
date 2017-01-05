@@ -1,9 +1,6 @@
 //
-//  ViewController.swift
-//  SyncAndAsync
-//
-//  Created by Jaehoon Lee on 2016.
-//  Copyright © 2016년 Jaehoon Lee. All rights reserved.
+// 동기식/비동기식 네트워크 접근
+// 메인 쓰레드에서 UI 다루기
 //
 
 import UIKit
@@ -17,7 +14,7 @@ class ViewController: UIViewController {
    var queue = OperationQueue()
 
    // 동기식 통신
-   @IBAction func handleSync(_ sender: AnyObject) {
+   @IBAction func handleSync(_ sender: Any) {
       imageView.image = nil
       
       if let url = URL(string: urlStr) {
@@ -46,7 +43,7 @@ class ViewController: UIViewController {
             let data = try Data(contentsOf: url)
             let image = UIImage(data: data)
             
-            // show image on MainThread
+            // 메인 쓰레드에서 이미지 출력(UI는 메인 쓰레드에서)
             self.performSelector(onMainThread: #selector(showImage(image:)), with: image, waitUntilDone: false)
          }
          catch let error {
@@ -59,7 +56,7 @@ class ViewController: UIViewController {
    }
 
    // 멀티 쓰레드를 이용한 비동기 통신
-   @IBAction func handleThread(_ sender: AnyObject) {
+   @IBAction func handleThread(_ sender: Any) {
       imageView.image = nil
       guard let url = URL(string: urlStr) else {
          return
@@ -70,7 +67,7 @@ class ViewController: UIViewController {
    }
    
    // Operation, OperationQueue를 사용하는 비동기
-   @IBAction func handleOperation(_ sender: AnyObject) {
+   @IBAction func handleOperation(_ sender: Any) {
       imageView.image = nil
       guard let url = URL(string: urlStr) else {
          return
@@ -83,7 +80,7 @@ class ViewController: UIViewController {
             
             // show image on MainThread
             OperationQueue.main.addOperation {
-               self.imageView.image = image
+                self.imageView.image = image
             }
          }
          catch let error {
@@ -93,7 +90,7 @@ class ViewController: UIViewController {
    }
 
    // Session/Task를 사용하는 비동기 네트워크
-   @IBAction func handleTask(_ sender: AnyObject) {
+   @IBAction func handleTask(_ sender: Any) {
       imageView.image = nil
       guard let url = URL(string: urlStr) else {
          return

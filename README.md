@@ -111,6 +111,9 @@ iOS 10 Samples.
 
 ## 15_CameraAndPhotos
 
+- ImagePicker : 이미지 피커를 이용해서 사진 촬영과 앨범 내 사진 선택
+- MyPhotos : 포토 프레임웥크를
+
 ## 16_Multimedia
 
 ## 17_Sensor

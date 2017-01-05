@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MapView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-la-MLj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-kF-nnH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="서울" id="6C2-DI-ocK">
+                                        <connections>
+                                            <action selector="showSeoul:" destination="vXZ-lx-hvc" id="Kke-hU-s0F"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="해운대" id="KeC-wu-KKv">
+                                        <connections>
+                                            <action selector="showHaewondae:" destination="vXZ-lx-hvc" id="CPQ-Ll-5bp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GCb-kF-nnH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4bM-3B-uho"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cFa-la-MLj" secondAttribute="bottom" id="Cjo-v0-3sv"/>
+                            <constraint firstItem="cFa-la-MLj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FBL-Ob-ieV"/>
+                            <constraint firstItem="GCb-kF-nnH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Jeg-Cp-nEt"/>
+                            <constraint firstItem="cFa-la-MLj" firstAttribute="top" secondItem="GCb-kF-nnH" secondAttribute="bottom" id="NOX-JY-4xZ"/>
+                            <constraint firstAttribute="trailing" secondItem="cFa-la-MLj" secondAttribute="trailing" id="hxB-tf-hny"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCb-kF-nnH" secondAttribute="trailing" constant="-16" id="zGz-Xy-R7Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="cFa-la-MLj" id="p6s-fo-ptx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="204"/>
+        </scene>
+    </scenes>
+</document>
