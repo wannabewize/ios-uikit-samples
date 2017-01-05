@@ -1,22 +1,17 @@
 //
 //  ViewController.swift
-//  CollectionView
+//  CollectionViewCustomLayout
 //
-//  Created by Jaehoon Lee on 2016. 12. 28..
-//  Copyright © 2016년 vanillastep. All rights reserved.
+//  Created by Jaehoon Lee on 2017. 1. 6..
+//  Copyright © 2017년 vanillastep. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
     var nations : [[String:String]]!
-    
-    // Selection : label.highlightedTextColor
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Select Item : " + (nations[indexPath.row]["NAME"])!);
-    }
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return nations.count
@@ -38,9 +33,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
+        // 레이아웃 생성
+        let cellSize = CGSize(width: 260, height: 128)
+        let radius = self.view.frame.size.width * 0.80
+        let xOffset = self.view.frame.size.width * 0.40
+        print(self.view.frame.size)
+        let layout = AWCollectionViewDialLayout(raduis: radius, angularSpacing: 18.0, cellSize: cellSize, alignment: .center, itemHeight: 100, xOffset: xOffset)
+        // Initializer가 xOffset을 설정 못한다. Bug!
+        layout.xOffset = xOffset
+        // 레이아웃 교체
+        collectionView.setCollectionViewLayout(layout, animated: false)
         nations = [
             [ "NAME":"Korea", "IMAGE":"Korea.png" ],
             [ "NAME":"Japan", "IMAGE":"Japan.png" ],

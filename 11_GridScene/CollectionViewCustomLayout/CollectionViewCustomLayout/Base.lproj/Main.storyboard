@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewCustomLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ADI-vV-WSz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lsA-nB-8pO">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FLAG_CELL" id="Ob5-Ro-6pq" customClass="FlagCell" customModule="CollectionViewCustomLayout" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="0.0" width="260" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Austria.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mz3-Ye-joA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="133"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="UIb-fa-Oe4"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5II-4C-oSe">
+                                                    <rect key="frame" x="208" y="8" width="44" height="112"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="5II-4C-oSe" firstAttribute="leading" secondItem="Mz3-Ye-joA" secondAttribute="trailing" constant="8" id="IFM-Ji-Ojn"/>
+                                            <constraint firstItem="5II-4C-oSe" firstAttribute="trailing" secondItem="Ob5-Ro-6pq" secondAttribute="trailingMargin" id="Rrf-03-nMz"/>
+                                            <constraint firstItem="Mz3-Ye-joA" firstAttribute="top" secondItem="Ob5-Ro-6pq" secondAttribute="top" id="fbS-mj-O28"/>
+                                            <constraint firstItem="5II-4C-oSe" firstAttribute="top" secondItem="Ob5-Ro-6pq" secondAttribute="topMargin" id="oOt-cC-V0g"/>
+                                            <constraint firstItem="Mz3-Ye-joA" firstAttribute="leading" secondItem="Ob5-Ro-6pq" secondAttribute="leading" id="pRu-ZJ-3do"/>
+                                            <constraint firstItem="5II-4C-oSe" firstAttribute="bottom" secondItem="Ob5-Ro-6pq" secondAttribute="bottomMargin" id="sn0-p1-Suj"/>
+                                        </constraints>
+                                        <size key="customSize" width="260" height="128"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Mz3-Ye-joA" id="Hrx-6K-Chd"/>
+                                            <outlet property="nameLabel" destination="5II-4C-oSe" id="oZI-K8-XXf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Nbr-TR-APJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sMf-dR-daX"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ADI-vV-WSz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5uO-lZ-mUD"/>
+                            <constraint firstItem="ADI-vV-WSz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G3N-WX-rl2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ADI-vV-WSz" secondAttribute="bottom" id="WEf-b0-roX"/>
+                            <constraint firstAttribute="trailing" secondItem="ADI-vV-WSz" secondAttribute="trailing" id="ouY-rE-EQ9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ADI-vV-WSz" id="rN1-WK-gaq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Austria.png" width="200" height="133"/>
+    </resources>
+</document>

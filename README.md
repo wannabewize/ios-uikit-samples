@@ -74,6 +74,8 @@ iOS 10 Samples.
 ## 11_GridScene
 
 - CollectionView : 콜렉션 뷰
+- CollectionViewCustomLayout : 커스텀 레이아웃을 적용한 콜렉션 뷰
+- TableAndCollectionView : 테이블 뷰 셀에 콜렉션 뷰 내장하기(작성 중)
 
 ## 12_DynamicScene
 
