@@ -13,14 +13,7 @@ let AddCompletionNotification = Notification.Name("TodoAddCompleted")
 let DeleteCompletionNotification = Notification.Name("TodoDeleteCompleted")
 
 class TodoManager {
-    
-    static private var instance : TodoManager!
-    static var shared : TodoManager {
-        if nil == instance {
-            instance = TodoManager()
-        }
-        return instance
-    }
+    static let shared = TodoManager()
     
     // Singleton 이외의 방법으로 객체 생성 방지
     private init() {
