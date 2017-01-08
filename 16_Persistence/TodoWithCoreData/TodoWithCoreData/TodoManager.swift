@@ -11,17 +11,11 @@ import CoreData
 
 
 class TodoManager {
-    
+
     static let AddNotification = Notification.Name("TodoAddNotification")
     static let DeleteNotification = Notification.Name("TodoDeleteNotification")
-    
-    static private var instance : TodoManager!
-    static var shared : TodoManager {
-        if nil == instance {
-            instance = TodoManager()
-        }
-        return instance
-    }
+
+    static let shared = TodoManager()
     
     // Singleton 이외의 방법으로 객체 생성 방지
     private init() {
@@ -46,8 +40,9 @@ class TodoManager {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer
+        let managedObject = container.viewContext
         do {
-            let todos = try container.viewContext.fetch(request)
+            let todos = try managedObject.fetch(request)
             print(todos)
             self.todoList = todos
         }

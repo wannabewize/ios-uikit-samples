@@ -1,9 +1,5 @@
 //
 //  ComposeViewController.swift
-//  TodoWithCoreData
-//
-//  Created by Jaehoon Lee on 2016. 9. 26..
-//  Copyright © 2016년 Jaehoon Lee. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +12,7 @@ class ComposeViewController: UIViewController {
       self.dismiss(animated: true, completion: nil)
 
       let manager = TodoManager.shared
-      manager.add(title: textField.text!, due: datePicker.date)
+      manager.addTodo(title: textField.text!, dueDate: datePicker.date)
       
       // 저장된 내용을 다시 읽어오기
       manager.resolveAll()

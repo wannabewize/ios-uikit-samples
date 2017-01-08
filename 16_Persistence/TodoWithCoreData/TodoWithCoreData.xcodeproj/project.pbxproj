@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C2852C01E1C1CAA004DA95A /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2852BE1E1C1CAA004DA95A /* Todo+CoreDataClass.swift */; };
-		2C2852C11E1C1CAA004DA95A /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2852BF1E1C1CAA004DA95A /* Todo+CoreDataProperties.swift */; };
 		2C3966111D99603000E49F87 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3966101D99603000E49F87 /* ComposeViewController.swift */; };
+		2C58EDCA1E229F1D00A07F66 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58EDC81E229F1D00A07F66 /* Todo+CoreDataClass.swift */; };
+		2C58EDCB1E229F1D00A07F66 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58EDC91E229F1D00A07F66 /* Todo+CoreDataProperties.swift */; };
 		2C8791AD1D98E2FC0021B531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791AC1D98E2FC0021B531 /* AppDelegate.swift */; };
 		2C8791AF1D98E2FC0021B531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8791AE1D98E2FC0021B531 /* ViewController.swift */; };
 		2C8791B21D98E2FC0021B531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8791B01D98E2FC0021B531 /* Main.storyboard */; };
@@ -20,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C2852BE1E1C1CAA004DA95A /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Todo+CoreDataClass.swift"; path = "TodoWithCoreData/Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2C2852BF1E1C1CAA004DA95A /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Todo+CoreDataProperties.swift"; path = "TodoWithCoreData/Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C3966101D99603000E49F87 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		2C58EDC81E229F1D00A07F66 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2C58EDC91E229F1D00A07F66 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C8791A91D98E2FC0021B531 /* TodoWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8791AC1D98E2FC0021B531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C8791AE1D98E2FC0021B531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +48,6 @@
 		2C8791A01D98E2FC0021B531 = {
 			isa = PBXGroup;
 			children = (
-				2C2852BE1E1C1CAA004DA95A /* Todo+CoreDataClass.swift */,
-				2C2852BF1E1C1CAA004DA95A /* Todo+CoreDataProperties.swift */,
 				2C8791AB1D98E2FC0021B531 /* TodoWithCoreData */,
 				2C8791AA1D98E2FC0021B531 /* Products */,
 			);
@@ -66,6 +64,8 @@
 		2C8791AB1D98E2FC0021B531 /* TodoWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				2C58EDC81E229F1D00A07F66 /* Todo+CoreDataClass.swift */,
+				2C58EDC91E229F1D00A07F66 /* Todo+CoreDataProperties.swift */,
 				2C8791AC1D98E2FC0021B531 /* AppDelegate.swift */,
 				2C8791AE1D98E2FC0021B531 /* ViewController.swift */,
 				2C8791B01D98E2FC0021B531 /* Main.storyboard */,
@@ -154,10 +154,10 @@
 				2C8791B51D98E2FC0021B531 /* TodoWithCoreData.xcdatamodeld in Sources */,
 				2C8791C61D98E3BD0021B531 /* TodoManager.swift in Sources */,
 				2C8791AF1D98E2FC0021B531 /* ViewController.swift in Sources */,
-				2C2852C11E1C1CAA004DA95A /* Todo+CoreDataProperties.swift in Sources */,
+				2C58EDCB1E229F1D00A07F66 /* Todo+CoreDataProperties.swift in Sources */,
 				2C8791AD1D98E2FC0021B531 /* AppDelegate.swift in Sources */,
 				2C3966111D99603000E49F87 /* ComposeViewController.swift in Sources */,
-				2C2852C01E1C1CAA004DA95A /* Todo+CoreDataClass.swift in Sources */,
+				2C58EDCA1E229F1D00A07F66 /* Todo+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

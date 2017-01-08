@@ -1,9 +1,5 @@
 //
-//  ViewController.swift
 //  TodoWithCoreData
-//
-//  Created by Jaehoon Lee on 2016. 9. 26..
-//  Copyright © 2016년 Jaehoon Lee. All rights reserved.
 //
 
 import UIKit
@@ -33,19 +29,11 @@ class ViewController: UIViewController {
     // 모델 추가 알림 다루기
     func handleTodoAddNoti(noti : Notification) {
         tableView.reloadData()
-//        if let index = noti.userInfo?["INDEX"] as? Int {
-//            let indexPath = IndexPath(row: index, section: 0)
-//            tableView.insertRows(at: [indexPath], with: .automatic)
-//        }
     }
     
     // 모델 삭제 알림 다루기
     func handleTodoDeleteNoti(noti : Notification) {
         tableView.reloadData()
-//        if let index = noti.userInfo?["INDEX"] as? Int {
-//            let indexPath = IndexPath(row: index, section: 0)
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
-//        }
     }
     
     // 모델 변경 감지를 위한 감시객체 등록
