@@ -4,8 +4,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    var dateFormatter : DateFormatter!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("todo count : ", TodoManager.shared.count)
@@ -16,7 +17,8 @@ class ViewController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TODO_CELL", for: indexPath)
         let todo = TodoManager.shared.todo(at: indexPath.row)!
         cell.textLabel?.text = todo.title!
-        cell.detailTextLabel?.text = todo.dueDate?.description
+        let dateStr = dateFormatter.string(from: todo.dueDate as! Date)
+        cell.detailTextLabel?.text = dateStr
         return cell
     }
     
@@ -50,6 +52,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
         
         print("Home Directory : ",NSHomeDirectory())
         

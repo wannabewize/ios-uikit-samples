@@ -30,19 +30,20 @@ class TodoManager {
     func resolveAll() {
         let request : NSFetchRequest<Todo> = Todo.fetchRequest()
         
-        let date = Date(timeIntervalSinceNow: 60 * 60 * 24 * 7)
-        let predicate = NSPredicate(format: "dueDate <= %@", [date])
+        // 일주일 이내 완료. NSDate 타입 사용
+        let date = Date(timeIntervalSinceNow: 60 * 60 * 24 * 7) as NSDate
+        let predicate = NSPredicate(format: "dueDate <= %@", date) // Date 타입 호환 안됨
         request.predicate = predicate
-        
-        let sort = NSSortDescriptor(key: "duaDate", ascending: true)
+
+        let sort = NSSortDescriptor(key: "dueDate", ascending: true)
         request.sortDescriptors = [sort]
-        
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer
-        let managedObject = container.viewContext
+        let moc = container.viewContext
+        
         do {
-            let todos = try managedObject.fetch(request)
+            let todos = try moc.fetch(request)
             print(todos)
             self.todoList = todos
         }
@@ -60,24 +61,26 @@ class TodoManager {
     }
     
     func todo(at index : Int) -> Todo? {
-        if index < todoList.count {
-            return todoList[index]
+        guard index < todoList.count else {
+            return nil
         }
-        return nil
+        return todoList[index]
     }
     
     // 새 할일 추가
     func add(title : String, due date : Date) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer
+        let moc : NSManagedObjectContext = container.viewContext
         
-        let todo = NSEntityDescription.insertNewObject(forEntityName: "Todo", into: container.viewContext) as! Todo
+        let todo = NSEntityDescription.insertNewObject(forEntityName: "Todo", into: moc) as! Todo
         todo.title = title
+        // Date -> NSDate로
         todo.dueDate = date as NSDate
         
         
         do {
-            try container.viewContext.save()
+            try moc.save()
             print("Save Success!")
         }
         catch let error {

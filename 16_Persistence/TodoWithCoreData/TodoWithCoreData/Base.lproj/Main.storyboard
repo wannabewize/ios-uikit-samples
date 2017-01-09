@@ -29,18 +29,18 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kTz-IQ-129" id="Sxn-tk-Eol">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YQu-6f-B5b">
-                                                    <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Auf-2B-mGo">
-                                                    <rect key="frame" x="246" y="11" width="59" height="21"/>
+                                                    <rect key="frame" x="246" y="12" width="59" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -51,8 +51,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kqM-D6-SvP"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uyd-sU-VXk"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1pY-MD-eab"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="V4n-mx-cu5"/>
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7w-My-u8G">
@@ -83,6 +83,9 @@
                             <constraint firstItem="O7w-My-u8G" firstAttribute="leading" secondItem="LBj-3l-mSK" secondAttribute="leading" id="zuq-Ag-A9G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="tzI-Tg-XWC" id="DFm-XN-3bO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +165,10 @@
                             <constraint firstAttribute="trailing" secondItem="1eG-h0-TQ3" secondAttribute="trailing" id="wlj-Fo-5KJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="7M2-qI-Hk8" id="xGt-AG-ld0"/>
+                        <outlet property="textField" destination="OBV-JG-byz" id="8L7-Nn-xVZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kw9-Uv-rAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
