@@ -10,6 +10,7 @@ class Todo : Object {
 
 
 class TodoManager {
+    
     static let AddNotification = Notification.Name("TodoAddNotification")
     static let DeleteNotification = Notification.Name("TodoDeleteNotification")
     
@@ -21,36 +22,55 @@ class TodoManager {
         return todoList.count
     }
     
+    // 할일 추가
     func addTodo(title : String, dueDate : Date) {
         let todo = Todo()
         todo.title = title
         todo.dueDate = dueDate
-        
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(todo)
+
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(todo)
+            }
+            
+            resolveAll()
+            let index = self.todoList.count - 1
+            NotificationCenter.default.post(name: TodoManager.AddNotification, object: nil, userInfo: ["INDEX":index])
         }
+        catch let error {
+            print("addTodo Error :", error)
+        }
+        
     }
-    
     
     func resolveAll() {
         let realm = try! Realm()
-        let todos = realm.objects(Todo.self)
-        for todo in todos {
-            print(todo)
-        }
+        let todos = realm.objects(Todo.self).sorted(byProperty: "dueDate", ascending: true)
+        
+        self.todoList = Array<Todo>(todos)
     }
     
     // 할일 삭제
     func remove(at index : Int) {
-        todoList.remove(at: index)
+        let todo = todoList[index]
         
-        // 모델 변경을 컨트롤러에게 알림
-        NotificationCenter.default.post(name: TodoManager.DeleteNotification, object: nil, userInfo:["INDEX":index])
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(todo)
+            }
+            
+            // 모델 변경을 컨트롤러에게 알림
+            NotificationCenter.default.post(name: TodoManager.DeleteNotification, object: nil, userInfo:["INDEX":index])
+        }
+        catch let error {
+            print("remove Todo Error : ", error)
+        }
+        
     }
     
     func todo(at index : Int) -> Todo? {
-
-        return nil
+        return todoList[index]
     }
 }

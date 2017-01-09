@@ -9,7 +9,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     var dateFormatter : DateFormatter!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("todo count : ", TodoManager.shared.count)
         return TodoManager.shared.count
     }
     
@@ -53,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
+        dateFormatter.dateFormat = "YYYY/MM/DD"
         
         print("Home Directory : ",NSHomeDirectory())
         

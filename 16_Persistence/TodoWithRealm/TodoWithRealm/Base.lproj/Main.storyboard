@@ -95,7 +95,7 @@
         <!--View Controller-->
         <scene sceneID="w6L-SC-gDp">
             <objects>
-                <viewController id="RTF-s4-yMM" customClass="ViewController" customModule="TodoWithCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RTF-s4-yMM" customClass="ViewController" customModule="TodoWithRealm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5dg-bQ-KWJ"/>
                         <viewControllerLayoutGuide type="bottom" id="MNa-Mc-xEZ"/>
@@ -112,18 +112,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TbW-FL-V9l" id="Zoz-43-e21">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QIb-k1-QRR">
-                                                    <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPb-ZF-RXj">
-                                                    <rect key="frame" x="301" y="11" width="59" height="21"/>
+                                                    <rect key="frame" x="301" y="12" width="59" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -166,6 +166,9 @@
                             <constraint firstItem="ioZ-sf-aCG" firstAttribute="leading" secondItem="DTK-9Z-eEc" secondAttribute="leading" id="ovf-RQ-QZz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ioZ-sf-aCG" id="18a-DW-DvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlL-bs-VaS" sceneMemberID="firstResponder"/>
             </objects>
