@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkLibraries" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Jcc-mM-s6X">
+                                <rect key="frame" x="0.0" y="20" width="375" height="42"/>
+                                <items>
+                                    <barButtonItem title="ReqJSON" id="cax-ys-BZ0">
+                                        <connections>
+                                            <action selector="requestJSON:" destination="BYZ-38-t0r" id="VQd-i2-KMy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="ReqImg" id="XpM-V7-mim">
+                                        <connections>
+                                            <action selector="requestImage:" destination="BYZ-38-t0r" id="EEw-Zq-k0z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="ImageLoader" id="AFs-Hc-3Mk">
+                                        <connections>
+                                            <action selector="loadImage:" destination="BYZ-38-t0r" id="LI4-6a-XtZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Clear" id="Q06-yy-zOk">
+                                        <connections>
+                                            <action selector="clearCache:" destination="BYZ-38-t0r" id="dvq-nd-bR1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Fxs-MN-COc">
+                                <rect key="frame" x="0.0" y="62" width="375" height="605"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irM-ro-By3">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="irM-ro-By3" secondAttribute="height" multiplier="4:3" id="yJE-l1-5bJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n67-aw-IM2">
+                                        <rect key="frame" x="0.0" y="283" width="375" height="320"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZxS-cR-soB">
+                                        <rect key="frame" x="0.0" y="605" width="375" height="0.0"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="n67-aw-IM2" firstAttribute="leading" secondItem="Fxs-MN-COc" secondAttribute="leading" id="3rW-Li-8P5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZxS-cR-soB" secondAttribute="trailing" id="4sf-je-UUX"/>
+                                    <constraint firstItem="irM-ro-By3" firstAttribute="top" secondItem="Fxs-MN-COc" secondAttribute="top" id="5Ne-ha-wtN"/>
+                                    <constraint firstAttribute="trailing" secondItem="n67-aw-IM2" secondAttribute="trailing" id="fbo-JL-5o4"/>
+                                    <constraint firstItem="irM-ro-By3" firstAttribute="leading" secondItem="Fxs-MN-COc" secondAttribute="leading" id="j8C-ns-Ahs"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZxS-cR-soB" secondAttribute="bottom" id="oim-hC-ayx"/>
+                                    <constraint firstAttribute="trailing" secondItem="irM-ro-By3" secondAttribute="trailing" id="p4b-tv-Ygi"/>
+                                    <constraint firstItem="ZxS-cR-soB" firstAttribute="leading" secondItem="Fxs-MN-COc" secondAttribute="leading" id="phV-4w-YhB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jcc-mM-s6X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6EE-V4-JLv"/>
+                            <constraint firstItem="Fxs-MN-COc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bje-TW-KqU"/>
+                            <constraint firstAttribute="trailing" secondItem="Jcc-mM-s6X" secondAttribute="trailing" id="Iqd-9I-Mo2"/>
+                            <constraint firstItem="Jcc-mM-s6X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JaD-Kd-CVO"/>
+                            <constraint firstAttribute="trailing" secondItem="Fxs-MN-COc" secondAttribute="trailing" id="Po6-K8-Tlf"/>
+                            <constraint firstItem="Fxs-MN-COc" firstAttribute="top" secondItem="Jcc-mM-s6X" secondAttribute="bottom" id="iYH-in-pz8"/>
+                            <constraint firstAttribute="bottom" secondItem="Fxs-MN-COc" secondAttribute="bottom" id="yJ2-Ic-ZOj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="irM-ro-By3" id="AbO-Bk-zAv"/>
+                        <outlet property="progressView" destination="ZxS-cR-soB" id="MVw-Dp-0ku"/>
+                        <outlet property="textView" destination="n67-aw-IM2" id="KOE-T1-GBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-10.4" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

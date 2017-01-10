@@ -12,6 +12,7 @@
 		2C2853331E1C9C78004DA95A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2853311E1C9C78004DA95A /* Main.storyboard */; };
 		2C2853351E1C9C78004DA95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2853341E1C9C78004DA95A /* Assets.xcassets */; };
 		2C2853381E1C9C78004DA95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2853361E1C9C78004DA95A /* LaunchScreen.storyboard */; };
+		2C5F389C1E25349000055EBA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F389B1E25349000055EBA /* logo.png */; };
 		6E41ADE17AE96C39DC8E769B /* Pods_NetworkLibraries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E49ECA11137B05E2C3ED234 /* Pods_NetworkLibraries.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		2C2853341E1C9C78004DA95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C2853371E1C9C78004DA95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C2853391E1C9C78004DA95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C5F389B1E25349000055EBA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4358C6CFFD5A2BEDF823A76C /* Pods-NetworkLibraries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLibraries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkLibraries/Pods-NetworkLibraries.debug.xcconfig"; sourceTree = "<group>"; };
 		E412D2F6EEA2B83A2DF178C0 /* Pods-NetworkLibraries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLibraries.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkLibraries/Pods-NetworkLibraries.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 		2C28532C1E1C9C78004DA95A /* NetworkLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				2C5F389B1E25349000055EBA /* logo.png */,
 				2C28532D1E1C9C78004DA95A /* AppDelegate.swift */,
 				2C28532F1E1C9C78004DA95A /* ViewController.swift */,
 				2C2853311E1C9C78004DA95A /* Main.storyboard */,
@@ -152,6 +155,7 @@
 			files = (
 				2C2853381E1C9C78004DA95A /* LaunchScreen.storyboard in Resources */,
 				2C2853351E1C9C78004DA95A /* Assets.xcassets in Resources */,
+				2C5F389C1E25349000055EBA /* logo.png in Resources */,
 				2C2853331E1C9C78004DA95A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +380,7 @@
 				2C28533E1E1C9C78004DA95A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
