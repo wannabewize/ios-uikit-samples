@@ -100,7 +100,7 @@ class ViewController: UIViewController {
       let session = URLSession(configuration: config)
       let task = session.dataTask(with: url) { (data : Data?, response : URLResponse?, error : Error?) in
          if error != nil {
-            print("Error : ", error?.localizedDescription)
+            print("Error : ", error!.localizedDescription)
             return
          }
          
