@@ -4,15 +4,17 @@
 
 import UIKit
 
+struct SongInfo {
+    var title : String!
+    var artist : String!
+    var image : String!
+}
+
 class ViewController: UIViewController, UITableViewDataSource, XMLParserDelegate {
     
     let feedUrl = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=25/xml"
     
-    struct SongInfo {
-        var title : String!
-        var artist : String!
-        var image : String!
-    }
+
     
     @IBOutlet var tableView : UITableView!
     
