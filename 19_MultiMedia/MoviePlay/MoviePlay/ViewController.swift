@@ -82,7 +82,7 @@ class ViewController: UIViewController {
    }
    
    override func viewWillAppear(_ animated: Bool) {
-      NotificationCenter.default.addObserver(self, selector: #selector(ViewController.handleMovieDurationNoti(_:)), name: NSNotification.Name.MPMovieDurationAvailable, object: nil)
+      NotificationCenter.default.addObserver(self, selector: #selector(handleMovieDurationNoti), name: NSNotification.Name.MPMovieDurationAvailable, object: nil)
    }
    
    func handleMovieDurationNoti(_ noti : Notification) {

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-Gd-2zT">
-                                <rect key="frame" x="4" y="556" width="592" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-Gd-2zT">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Local" id="0Of-sQ-HP1">
                                         <connections>
@@ -49,12 +48,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLM-mF-q4U">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="V6e-Gd-2zT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="iu3-h3-dnb"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="V6e-Gd-2zT" secondAttribute="bottom" id="lFs-kA-r9U"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="V6e-Gd-2zT" secondAttribute="trailing" constant="-16" id="uq7-A3-jHx"/>
+                            <constraint firstAttribute="trailing" secondItem="V6e-Gd-2zT" secondAttribute="trailing" id="1A9-zK-BqV"/>
+                            <constraint firstAttribute="trailing" secondItem="XLM-mF-q4U" secondAttribute="trailing" id="DEL-rT-25d"/>
+                            <constraint firstItem="XLM-mF-q4U" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MRm-Ya-DNY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XLM-mF-q4U" secondAttribute="bottom" id="Mk6-1a-BoJ"/>
+                            <constraint firstItem="XLM-mF-q4U" firstAttribute="top" secondItem="V6e-Gd-2zT" secondAttribute="bottom" id="Uoh-u1-uoQ"/>
+                            <constraint firstItem="V6e-Gd-2zT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="VdT-lL-T9e"/>
+                            <constraint firstItem="V6e-Gd-2zT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="act-XH-0yZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -62,12 +69,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="XLM-mF-q4U">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </view>
             </objects>
+            <point key="canvasLocation" x="138.75" y="132.5"/>
         </scene>
     </scenes>
 </document>

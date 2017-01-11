@@ -56,7 +56,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITableViewDataSo
             
             // 재생 버튼의 제목 변경
             let button = sender as! UIButton
-            button.setTitle("재생", for: UIControlState())
+            button.setTitle("재생", for: .normal)
             
             player.stop()
         }
@@ -80,12 +80,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, UITableViewDataSo
             player.delegate = self
             
             // 음악 재생과 타이머 실행
-            player.play()
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.handleTimer(_:)), userInfo: nil, repeats: true)
+//            player.play()
+            if player.prepareToPlay() {
+                player.play()
+            }
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
             
             // 재생 버튼의 제목 변경
             let button = sender as! UIButton
-            button.setTitle("중지", for: UIControlState())
+            button.setTitle("중지", for: .normal)
             
             // 슬라이더의 최대값 설정
             timeSlider.maximumValue = Float(player.duration)
