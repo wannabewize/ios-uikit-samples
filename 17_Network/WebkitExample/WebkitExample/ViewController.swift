@@ -19,8 +19,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView = WKWebView()
         self.view.addSubview(webView)
         
-        webView.navigationDelegate = self
-        
         // Layout
         toolbar.translatesAutoresizingMaskIntoConstraints = false
         webView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +33,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let fileItem = UIBarButtonItem(title: "File", style: .plain, target: self, action: #selector(showFileContent))
         let strItem = UIBarButtonItem(title: "String", style: .plain, target: self, action: #selector(showStrContent))
         let sfItem = UIBarButtonItem(title: "Safari", style: .plain, target: self, action: #selector(ShowSF))
-        toolbar.setItems([webItem, fileItem, strItem, scriptItem], animated: false)
+        toolbar.setItems([webItem, fileItem, strItem, sfItem], animated: false)
     }
 
     func showFileContent() {
@@ -61,7 +59,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     func ShowSF() {
-        UIWebView
         let urlStr = "https://developer.apple.com/library"
         if let url = URL(string: urlStr) {
             let safariVC = SFSafariViewController(url: url)
