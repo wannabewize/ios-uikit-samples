@@ -157,4 +157,7 @@ iOS 10 Samples.
 
 - Sensor : 가속도계, 회전계 측정
 
-## 21_AddressAndScedule
+## 22_AppCommunication
+
+- AppOpener : URL을 이용한 앱 열기 예제
+- InterAppCommunication : AppOpener가 오픈하는 앱
