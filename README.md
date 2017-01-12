@@ -146,6 +146,11 @@ iOS 10 Samples.
 
 - MapView : 맵뷰와 카메라, 맵뷰 델리게이트로 지도 이동 이벤트
 - SimpleAnnotation : 어노테이션 추가/삭제
+- VariousSpot : 커스텀 어노테이션/커스텀 어노테이션 뷰 예제
+- SpotAction : 어노테이션 뷰의 컨트롤
+- MapOverlay : 맵뷰에 오버레이를 이용한 도형 그리기
+- UserLocation : 사용자 위치 정보 얻기
+
 
 ## 20_Sensor
 

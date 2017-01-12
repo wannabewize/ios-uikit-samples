@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapOverlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTP-Ay-Oa9">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Circle" id="TUs-SF-tng">
+                                        <connections>
+                                            <action selector="addCircle:" destination="BYZ-38-t0r" id="fIS-n8-GdK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Polyline" id="0Vv-Fd-16d">
+                                        <connections>
+                                            <action selector="addPolyline:" destination="BYZ-38-t0r" id="Dc8-9o-ZZU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kqs-RP-t2H">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zFs-Xv-L66"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JTP-Ay-Oa9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2ft-8n-WYb"/>
+                            <constraint firstItem="Kqs-RP-t2H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9pF-eh-92F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kqs-RP-t2H" secondAttribute="bottom" id="G6E-vi-KPs"/>
+                            <constraint firstAttribute="trailing" secondItem="JTP-Ay-Oa9" secondAttribute="trailing" id="WnM-uT-o2l"/>
+                            <constraint firstItem="Kqs-RP-t2H" firstAttribute="top" secondItem="JTP-Ay-Oa9" secondAttribute="bottom" id="aar-Ts-66r"/>
+                            <constraint firstItem="JTP-Ay-Oa9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nbV-uJ-SKU"/>
+                            <constraint firstAttribute="trailing" secondItem="Kqs-RP-t2H" secondAttribute="trailing" id="yAc-OA-B58"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Kqs-RP-t2H" id="xjB-ZG-2YO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.5" y="147.5"/>
+        </scene>
+    </scenes>
+</document>
