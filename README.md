@@ -151,7 +151,7 @@ iOS 10 Samples.
 - MapOverlay : 맵뷰에 오버레이를 이용한 도형 그리기
 - UserLocation : 사용자 위치 정보 얻기
 - LocationConvert : 뷰 위치(x,y), 위경도, 주소 변환 예제
-
+- ItemSearch : MKLocalSearch를 이용한 검색 - 맵뷰로 전환 예제
 
 ## 20_Sensor
 
