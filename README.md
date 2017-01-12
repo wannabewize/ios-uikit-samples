@@ -155,4 +155,6 @@ iOS 10 Samples.
 
 ## 20_Sensor
 
+- Sensor : 가속도계, 회전계 측정
+
 ## 21_AddressAndScedule
