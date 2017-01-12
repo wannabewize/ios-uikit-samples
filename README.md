@@ -137,7 +137,15 @@ iOS 10 Samples.
 
 ## 19_Multimedia
 
+- MyMediaPlayer : MediaFramework를 이용한 음악 선택/쿼리 재생
+- MyAVFoundationPlayer : AVFoundation을 이용한 음악 재생, 재생 위치 이동
+- AVRecorder : AVAudioRecoder를 이용한 녹음
+- MoviePlay : 동영상 재생
+
 ## 20_LocationBased
+
+- MapView : 맵뷰와 카메라, 맵뷰 델리게이트로 지도 이동 이벤트
+- SimpleAnnotation : 어노테이션 추가/삭제
 
 ## 20_Sensor
 

@@ -6,14 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MapView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SimpleAnnotation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,23 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-la-MLj">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xaC-YM-Fc8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="G1q-vM-wV1"/>
-                                </connections>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-kF-nnH">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-VW-grK">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="서울" id="6C2-DI-ocK">
+                                    <barButtonItem title="추가" id="Cps-23-p5u">
                                         <connections>
-                                            <action selector="showSeoul:" destination="vXZ-lx-hvc" id="Kke-hU-s0F"/>
+                                            <action selector="addAnnotation:" destination="vXZ-lx-hvc" id="5gV-nH-HrI"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="해운대" id="KeC-wu-KKv">
+                                    <barButtonItem title="제거" id="nLm-wq-9KD">
                                         <connections>
-                                            <action selector="showHaewondae:" destination="vXZ-lx-hvc" id="CPQ-Ll-5bp"/>
+                                            <action selector="removeAnnotation:" destination="vXZ-lx-hvc" id="L1k-68-Fy4"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -46,22 +42,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GCb-kF-nnH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4bM-3B-uho"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cFa-la-MLj" secondAttribute="bottom" id="Cjo-v0-3sv"/>
-                            <constraint firstItem="cFa-la-MLj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FBL-Ob-ieV"/>
-                            <constraint firstItem="GCb-kF-nnH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Jeg-Cp-nEt"/>
-                            <constraint firstItem="cFa-la-MLj" firstAttribute="top" secondItem="GCb-kF-nnH" secondAttribute="bottom" id="NOX-JY-4xZ"/>
-                            <constraint firstAttribute="trailing" secondItem="cFa-la-MLj" secondAttribute="trailing" id="hxB-tf-hny"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GCb-kF-nnH" secondAttribute="trailing" constant="-16" id="zGz-Xy-R7Y"/>
+                            <constraint firstItem="xaC-YM-Fc8" firstAttribute="top" secondItem="RbZ-VW-grK" secondAttribute="bottom" id="BrS-Qe-8wk"/>
+                            <constraint firstItem="RbZ-VW-grK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Gx5-6D-X8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="xaC-YM-Fc8" secondAttribute="trailing" id="M1H-8f-Ekf"/>
+                            <constraint firstItem="xaC-YM-Fc8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="diE-dC-qzv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xaC-YM-Fc8" secondAttribute="bottom" id="kzv-LF-ACL"/>
+                            <constraint firstItem="RbZ-VW-grK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="mwb-MN-auX"/>
+                            <constraint firstAttribute="trailing" secondItem="RbZ-VW-grK" secondAttribute="trailing" id="rpW-ad-0h1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="cFa-la-MLj" id="p6s-fo-ptx"/>
+                        <outlet property="mapView" destination="xaC-YM-Fc8" id="uEC-TD-jI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="204"/>
+            <point key="canvasLocation" x="-175" y="203"/>
         </scene>
     </scenes>
 </document>
