@@ -32,7 +32,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let polyline = MKPolyline(coordinates: points, count: points.count)
         
         mapView.add(polyline)
-        mapView.remove(<#T##overlay: MKOverlay##MKOverlay#>)
     }
     
     
