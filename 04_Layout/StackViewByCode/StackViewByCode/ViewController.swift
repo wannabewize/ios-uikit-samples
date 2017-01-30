@@ -13,57 +13,66 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        layoutByConstraints()
+//        layoutByConstraints()
         layoutByStackView()
     }
 
     func layoutByStackView() {
         let titleLabel = UILabel()
         titleLabel.text = "제목"
+        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = UIColor.white
+        let titleLabelConstraint = NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        titleLabel.addConstraint(titleLabelConstraint)
         
         let title = UILabel()
         title.text = "스타워즈7"
+        title.backgroundColor = UIColor.white
         
         let directorLabel = UILabel()
         directorLabel.text = "감독"
+        directorLabel.textAlignment = .center
+        directorLabel.backgroundColor = UIColor.white
+        let directorLabelConstraint = NSLayoutConstraint(item: directorLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        directorLabel.addConstraint(directorLabelConstraint)
         
         let director = UILabel()
         director.text = "JJ 에이브럼스"
+        director.backgroundColor = UIColor.white
         
         let actorLabel = UILabel()
         actorLabel.text = "주연"
-        actorLabel.frame.size.width = 80
+        actorLabel.textAlignment = .center
+        actorLabel.backgroundColor = UIColor.white
+        let actorLabelContraint = NSLayoutConstraint(item: actorLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        actorLabel.addConstraint(actorLabelContraint)
         
         let actors = UILabel()
         actors.text = "데이지 리들리, 존 보예가, 아담 드라이버, 해리슨 포드"
         actors.numberOfLines = 0
-        
-        let labelWidth : CGFloat = 80
+        actors.backgroundColor = UIColor.white
         
         let titleStackView = UIStackView(arrangedSubviews: [titleLabel, title])
-        titleLabel.frame.size.width = labelWidth
         titleStackView.distribution = .fillProportionally
         titleStackView.alignment = .fill
-        titleStackView.spacing = 10
+        titleStackView.spacing = 2
         
         let directorStackView = UIStackView()
         // 스택뷰에 뷰 추가
         directorStackView.addArrangedSubview(directorLabel)
         directorStackView.addArrangedSubview(director)
-        directorLabel.frame.size.width = labelWidth
         directorStackView.alignment = .fill
         directorStackView.distribution = .fillProportionally
-        directorStackView.spacing = 10
+        directorStackView.spacing = 2
         
         let actorStackView = UIStackView(arrangedSubviews: [actorLabel, actors])
-        actorLabel.frame.size.width = labelWidth
         actorStackView.alignment = .fill
         actorStackView.distribution = .fillProportionally
-        actorStackView.spacing = 10
+        actorStackView.spacing = 2
         
         let movieStackView = UIStackView(arrangedSubviews: [titleStackView, directorStackView, actorStackView])
         movieStackView.axis = .vertical
-        movieStackView.spacing = 22
+        movieStackView.spacing = 4
         
         self.view.addSubview(movieStackView)
         
