@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,16 +32,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        data.append("abcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyzabcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyzabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz")
-        data.append("abcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz\nabcdefghjklmnopqrstuvwxyz")
-
+        data.append("Lorem ipsum dolor sit er elit lamet")
+        data.append("Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu,")
+        data.append("Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,")
+        data.append("Lorem ipsum dolor sit er elit lamet")
+        data.append("Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+        data.append("short sentence")
+        data.append("Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        data.append("one\ntwo\nthree")
+        data.append("Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.")
+        
     }
 }
 
