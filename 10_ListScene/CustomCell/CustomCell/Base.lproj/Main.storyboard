@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,61 +33,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-wd-X6U">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-wd-X6U">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uxu-5s-E9M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="58"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="58" id="EGu-bz-gbP"/>
-                                                                <constraint firstAttribute="width" constant="58" id="VJN-8J-728"/>
+                                                                <constraint firstAttribute="height" constant="60" id="CIU-Or-kKu"/>
+                                                                <constraint firstAttribute="width" constant="60" id="Hh8-UG-oBd"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nxi-ga-ggw">
-                                                            <rect key="frame" x="127" y="0.0" width="195" height="58"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nxi-ga-ggw">
+                                                            <rect key="frame" x="65" y="0.0" width="257" height="60.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYe-GU-XVH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="40"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="195" id="Fvt-jK-BVu"/>
-                                                                    </constraints>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYe-GU-XVH">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="257" height="32.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="default">
-                                                                        <mask key="constraints">
-                                                                            <exclude reference="Fvt-jK-BVu"/>
-                                                                        </mask>
-                                                                    </variation>
-                                                                    <variation key="widthClass=compact">
-                                                                        <mask key="constraints">
-                                                                            <include reference="Fvt-jK-BVu"/>
-                                                                        </mask>
-                                                                    </variation>
                                                                 </label>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="product price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-48-fHe">
-                                                                    <rect key="frame" x="0.0" y="40" width="195" height="18"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="112" id="MZN-gp-yca"/>
-                                                                    </constraints>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="product price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-48-fHe">
+                                                                    <rect key="frame" x="0.0" y="32.5" width="257" height="28"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="default">
-                                                                        <mask key="constraints">
-                                                                            <exclude reference="MZN-gp-yca"/>
-                                                                        </mask>
-                                                                    </variation>
-                                                                    <variation key="widthClass=compact">
-                                                                        <mask key="constraints">
-                                                                            <include reference="MZN-gp-yca"/>
-                                                                        </mask>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfu-9W-Njf">
-                                                            <rect key="frame" x="327" y="0.0" width="48" height="58"/>
+                                                            <rect key="frame" x="327" y="0.0" width="48" height="60.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="48" id="XbR-KM-cFh"/>
                                                                 <constraint firstAttribute="width" constant="48" id="sli-j1-sD5"/>
@@ -103,7 +77,6 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="mfu-9W-Njf" firstAttribute="leading" secondItem="nxi-ga-ggw" secondAttribute="trailing" constant="5" id="1da-cc-Ivu"/>
-                                                        <constraint firstItem="nxi-ga-ggw" firstAttribute="leading" secondItem="Uxu-5s-E9M" secondAttribute="trailing" constant="5" id="Rye-CB-U4O"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>

@@ -9,20 +9,31 @@
 import UIKit
 
 protocol ProductCellDelegate : class {
-  func addCart(code : String)
+    func addCart(code : String)
 }
 
 class ProductCell: UITableViewCell {
-  
-  weak var delegate : ProductCellDelegate!
-  
-  @IBAction func addButtonClicked(_ sender: AnyObject) {
-    delegate.addCart(code: productCode)
-  }
-  
-  var productCode : String!
-  
-  @IBOutlet weak var productImage: UIImageView!
-  @IBOutlet weak var productName: UILabel!
-  @IBOutlet weak var productPrice: UILabel!
+    
+    weak var delegate : ProductCellDelegate!
+    
+    override func awakeFromNib() {
+        print("awaken From Nib")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse() // required
+        print("prepare for reuse")
+    }
+    
+    
+    
+    @IBAction func addButtonClicked(_ sender: AnyObject) {
+        delegate.addCart(code: productCode)
+    }
+    
+    var productCode : String!
+    
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
 }
