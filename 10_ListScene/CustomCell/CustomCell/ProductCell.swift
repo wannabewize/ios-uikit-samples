@@ -1,9 +1,5 @@
 //
 //  ProductCell.swift
-//  TableCatalog
-//
-//  Created by wannabewize on 2015. 3. 19..
-//  Copyright (c) 2015년 wannabewize. All rights reserved.
 //
 
 import UIKit
@@ -25,9 +21,7 @@ class ProductCell: UITableViewCell {
         print("prepare for reuse")
     }
     
-    
-    
-    @IBAction func addButtonClicked(_ sender: AnyObject) {
+    @IBAction func addButtonClicked(_ sender: Any) {
         delegate.addCart(code: productCode)
     }
     

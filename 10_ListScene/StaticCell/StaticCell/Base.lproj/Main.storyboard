@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,11 +28,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-199" y="94"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Custom Table View Controller-->
         <scene sceneID="Ibi-7U-GEW">
             <objects>
-                <tableViewController id="EPh-D9-Mld" sceneMemberID="viewController">
+                <tableViewController id="EPh-D9-Mld" customClass="CustomTableViewController" customModule="StaticCell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I8q-JF-icc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,10 +188,10 @@
                                                     <exclude reference="aci-u6-rYG"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="y3m-TV-6Uh"/>
                                                     <exclude reference="aZp-Vt-Uvc"/>
-                                                    <exclude reference="gy5-Id-9Cg"/>
+                                                    <exclude reference="y3m-TV-6Uh"/>
                                                     <exclude reference="Fm2-OV-NSz"/>
+                                                    <exclude reference="gy5-Id-9Cg"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -199,10 +200,10 @@
                                                     <include reference="aci-u6-rYG"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="y3m-TV-6Uh"/>
                                                     <include reference="aZp-Vt-Uvc"/>
-                                                    <include reference="gy5-Id-9Cg"/>
+                                                    <include reference="y3m-TV-6Uh"/>
                                                     <include reference="Fm2-OV-NSz"/>
+                                                    <include reference="gy5-Id-9Cg"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -228,9 +229,9 @@
                                                     <exclude reference="H73-ry-eBp"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="OAw-Uq-ElQ"/>
                                                     <exclude reference="E7M-8W-Gni"/>
                                                     <exclude reference="Fsq-82-aFd"/>
+                                                    <exclude reference="OAw-Uq-ElQ"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -238,9 +239,9 @@
                                                     <include reference="H73-ry-eBp"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="OAw-Uq-ElQ"/>
                                                     <include reference="E7M-8W-Gni"/>
                                                     <include reference="Fsq-82-aFd"/>
+                                                    <include reference="OAw-Uq-ElQ"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -256,7 +257,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRJ-HK-PY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-146"/>
+            <point key="canvasLocation" x="842" y="-177"/>
         </scene>
     </scenes>
 </document>
