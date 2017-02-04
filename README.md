@@ -12,6 +12,7 @@ iOS 10 Samples.
 
 - Labels : 레이블(UILabel) 예제
 - ImageFiles : 이미지 파일과 이미지 뷰
+- ImagesByCode : 코드로 이미지와 이미지 뷰 다루기
 - ImageAssets : 애셋을 이용한 이미지 리소스 다루기
 - ContentMode : 뷰 컨텐트 모드
 - ViewStretch : 뷰 스트레칭. 슬라이싱
@@ -20,9 +21,10 @@ iOS 10 Samples.
 
 - FrameLayout : 프레임 기반의 레이아웃. 기기 회전에 대응하지 못한다.
 - AutoLayout : 제약조건을 이용한 오토레이아웃
-- StackView : IB를 이용한 스택뷰
-- AdaptiveUI : 적응형 UI 
 - AutoLayoutByCode : 코드를 이용한 오토레이아웃
+- AdaptiveUI : 적응형 UI 
+- AdaptiveUIByCode : 코드로 적응형 UI 작성
+- StackView : 스택뷰
 - StackViewByCode : 코드를 이용한 스택뷰
 
 ## 05_InteractiveScene
@@ -40,6 +42,7 @@ iOS 10 Samples.
 
 - TextField : 텍스트필드
 - TextEditing : 편집 이벤트 다루기
+- TextFieldAndFirstResponder : 최초 응답 객체
 - TextFieldAndKeyboard : 키보드 이벤트 알림과 텍스트필드
 
 ## 07_Dialog
@@ -69,7 +72,9 @@ iOS 10 Samples.
 - TableEditing : 테이블뷰를 이용한 편집
 - CustomCell : 커스텀 셀
 - StaticCell : 정적 테이블뷰를 이용한 정적 테이블
-- PullToRefresh : 당겨서 다시 읽는 테이블뷰
+- PullToRefresh : 당겨서 새로고침
+- CellLifeCycle : 셀의 라이프사이클
+- TableIndex : 인덱스
 
 ## 11_GridScene
 
