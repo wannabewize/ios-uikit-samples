@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         let control = UIRefreshControl()
+        control.attributedTitle = NSAttributedString(string: "Refreshing!")
         control.tintColor = UIColor.purple
         control.addTarget(self, action: #selector(reloadData), for: .valueChanged)
         tableView.refreshControl = control
