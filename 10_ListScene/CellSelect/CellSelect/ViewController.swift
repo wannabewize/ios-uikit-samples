@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func selectRandomCell(_ sender: Any) {
         let r = Int(arc4random_uniform( UInt32(data.count)) )
         let indexPath = IndexPath(row: r, section: 0)
-        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
     }
     
     // 선택된 셀 초기화
