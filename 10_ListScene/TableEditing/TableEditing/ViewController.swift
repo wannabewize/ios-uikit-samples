@@ -7,11 +7,13 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     var data = ["1","2","3","4","5"]
     
-    @IBAction func editList(_ sender: Any) {
-        tableView.isEditing = !tableView.isEditing
+    @IBAction func editList(_ sender: UIBarButtonItem) {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+        sender.title = tableView.isEditing ? "Done" : "Edit"
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
@@ -23,9 +25,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+//            tableView.beginUpdates()
             // 선택한 데이터와 셀 삭제
             data.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            
+//            tableView.endUpdates()
         }
         else {
             // 새로운 데이터 추가
@@ -36,14 +41,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    // 삭제 버튼 제목 커스터마이징
+//    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+//        return "Del"
+//    }
+//    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection")
         return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("cellForRowAt")
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL_ID", for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
         return cell
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 코드로 추가
+        let editButton = UIBarButtonItem(title: "Edit(Code)", style: .plain, target: self, action: #selector(editList(_:)))
+        self.toolbar.items?.append(editButton)
+        
+        self.toolbar.items?.append(self.editButtonItem)
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        print("setEditing : \(editing)")
+        
+        tableView.setEditing(editing, animated: true)
     }
 }
 
