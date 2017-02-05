@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     var data : [[String]]!
     var index : [String]!
     
@@ -25,6 +26,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return data[section].count
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return index[section]
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath)
@@ -36,22 +41,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        tableView.sectionIndexColor = UIColor.red
+//        tableView.sectionIndexMinimumDisplayRowCount = 10
+//        tableView.sectionIndexTrackingBackgroundColor = UIColor.white
+        
+        
         data = [
-            ["Korea", "China", "Japan"],
-            ["Korea", "China", "Japan"],
-            ["Korea", "China", "Japan"],
-            ["Korea", "China", "Japan"]
+            ["대한민국", "중국", "일본", "싱가폴", "필리핀"],
+            ["이탈리아", "스페인", "독일", "덴마크", "네델란드"],
+            ["에티오피아", "세네갈", "가봉", "나이지리아"],
+            ["미국", "캐나다", "쿠바"],
+            ["호주", "뉴질랜드"]
         ]
         
-        index = ["As", "Eu", "Af", "Am"]
+        index = ["아시아", "유럽", "아프리카", "아메리카", "오세아니아"]
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
