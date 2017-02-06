@@ -129,7 +129,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        images = ["baseball", "basketball", "billiard", "football", "golf", "icehockey", "pingpong", "rugby", "shuttlecock", "tennis", "volleyball"]
+        images = ["baseball", "basketball", "billiard", "football", "golf", "badminton", "tennis", "rugby"]
         data = ["baseball", "basketball", "billiard"]
         
         collectionView.allowsMultipleSelection = true
