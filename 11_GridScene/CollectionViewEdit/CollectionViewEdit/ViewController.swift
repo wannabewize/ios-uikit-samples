@@ -40,6 +40,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }        
     }
 
+    // 코드로 콜렉션 뷰 셀 이동
+    @IBAction func exchangeRandomCell(_ sender: Any) {
+        let r1 = Int( arc4random_uniform( UInt32(data.count) ))
+        let r2 = Int( arc4random_uniform( UInt32(data.count) ))
+        guard r1 != r2 else {
+            print("두 인덱스가 동일")
+            return
+        }
+        
+        print("move from \(r1) to \(r2)")
+        let src = IndexPath(item: r1, section: 0)
+        let dest = IndexPath(item: r2, section: 0)
+        collectionView.moveItem(at: src, to: dest)
+    }
+    
     func handleReorder(_ gesture : UILongPressGestureRecognizer) {
         let point = gesture.location(in: collectionView)
         switch gesture.state {

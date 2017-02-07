@@ -68,9 +68,16 @@
                                             <action selector="deleteItems:" destination="BYZ-38-t0r" id="cUZ-Zb-VUH"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qsg-IW-Asa"/>
                                     <barButtonItem systemItem="add" id="o5o-pE-47h">
                                         <connections>
                                             <action selector="addItem:" destination="BYZ-38-t0r" id="I0A-gf-GPV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z7j-Y2-ULJ"/>
+                                    <barButtonItem title="RandomMove" id="MnY-AM-b29">
+                                        <connections>
+                                            <action selector="exchangeRandomCell:" destination="BYZ-38-t0r" id="Kh5-3Q-OxD"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -93,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1156" y="-47"/>
+            <point key="canvasLocation" x="-1420" y="-51"/>
         </scene>
     </scenes>
 </document>
