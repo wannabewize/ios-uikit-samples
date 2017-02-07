@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageCell : UICollectionViewCell {
+class SportsCell : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     // 셀이 선택되면 테두리 출력
@@ -137,7 +137,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SportsCell", for: indexPath) as! SportsCell
         cell.imageView.image = UIImage(named: data[indexPath.item])
         return cell
     }

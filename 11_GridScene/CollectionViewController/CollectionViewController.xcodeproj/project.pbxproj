@@ -12,7 +12,15 @@
 		2C4E79631E49E737000DE69B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E79611E49E737000DE69B /* Main.storyboard */; };
 		2C4E79651E49E737000DE69B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E79641E49E737000DE69B /* Assets.xcassets */; };
 		2C4E79681E49E737000DE69B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E79661E49E737000DE69B /* LaunchScreen.storyboard */; };
-		2C4E79701E49E7B6000DE69B /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E796F1E49E7B6000DE69B /* CustomCollectionViewController.swift */; };
+		2C4E79701E49E7B6000DE69B /* SportsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E796F1E49E7B6000DE69B /* SportsCollectionViewController.swift */; };
+		2CAF379A1E4A4569000A814E /* badminton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37921E4A4569000A814E /* badminton.png */; };
+		2CAF379B1E4A4569000A814E /* baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37931E4A4569000A814E /* baseball.png */; };
+		2CAF379C1E4A4569000A814E /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37941E4A4569000A814E /* basketball.png */; };
+		2CAF379D1E4A4569000A814E /* billiard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37951E4A4569000A814E /* billiard.png */; };
+		2CAF379E1E4A4569000A814E /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37961E4A4569000A814E /* football.png */; };
+		2CAF379F1E4A4569000A814E /* golf.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37971E4A4569000A814E /* golf.png */; };
+		2CAF37A01E4A4569000A814E /* rugby.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37981E4A4569000A814E /* rugby.png */; };
+		2CAF37A11E4A4569000A814E /* tennis.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF37991E4A4569000A814E /* tennis.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +31,15 @@
 		2C4E79641E49E737000DE69B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4E79671E49E737000DE69B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4E79691E49E737000DE69B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C4E796F1E49E7B6000DE69B /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
+		2C4E796F1E49E7B6000DE69B /* SportsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewController.swift; sourceTree = "<group>"; };
+		2CAF37921E4A4569000A814E /* badminton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badminton.png; sourceTree = "<group>"; };
+		2CAF37931E4A4569000A814E /* baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseball.png; sourceTree = "<group>"; };
+		2CAF37941E4A4569000A814E /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
+		2CAF37951E4A4569000A814E /* billiard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billiard.png; sourceTree = "<group>"; };
+		2CAF37961E4A4569000A814E /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
+		2CAF37971E4A4569000A814E /* golf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf.png; sourceTree = "<group>"; };
+		2CAF37981E4A4569000A814E /* rugby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rugby.png; sourceTree = "<group>"; };
+		2CAF37991E4A4569000A814E /* tennis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tennis.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,31 @@
 		2C4E795C1E49E737000DE69B /* CollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2CAF37911E4A4569000A814E /* images */,
 				2C4E795D1E49E737000DE69B /* AppDelegate.swift */,
 				2C4E795F1E49E737000DE69B /* ViewController.swift */,
-				2C4E796F1E49E7B6000DE69B /* CustomCollectionViewController.swift */,
+				2C4E796F1E49E7B6000DE69B /* SportsCollectionViewController.swift */,
 				2C4E79611E49E737000DE69B /* Main.storyboard */,
 				2C4E79641E49E737000DE69B /* Assets.xcassets */,
 				2C4E79661E49E737000DE69B /* LaunchScreen.storyboard */,
 				2C4E79691E49E737000DE69B /* Info.plist */,
 			);
 			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		2CAF37911E4A4569000A814E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF37921E4A4569000A814E /* badminton.png */,
+				2CAF37931E4A4569000A814E /* baseball.png */,
+				2CAF37941E4A4569000A814E /* basketball.png */,
+				2CAF37951E4A4569000A814E /* billiard.png */,
+				2CAF37961E4A4569000A814E /* football.png */,
+				2CAF37971E4A4569000A814E /* golf.png */,
+				2CAF37981E4A4569000A814E /* rugby.png */,
+				2CAF37991E4A4569000A814E /* tennis.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +158,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAF379D1E4A4569000A814E /* billiard.png in Resources */,
+				2CAF379A1E4A4569000A814E /* badminton.png in Resources */,
+				2CAF379F1E4A4569000A814E /* golf.png in Resources */,
+				2CAF379E1E4A4569000A814E /* football.png in Resources */,
+				2CAF379B1E4A4569000A814E /* baseball.png in Resources */,
+				2CAF37A01E4A4569000A814E /* rugby.png in Resources */,
 				2C4E79681E49E737000DE69B /* LaunchScreen.storyboard in Resources */,
+				2CAF37A11E4A4569000A814E /* tennis.png in Resources */,
 				2C4E79651E49E737000DE69B /* Assets.xcassets in Resources */,
+				2CAF379C1E4A4569000A814E /* basketball.png in Resources */,
 				2C4E79631E49E737000DE69B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +181,7 @@
 			files = (
 				2C4E79601E49E737000DE69B /* ViewController.swift in Sources */,
 				2C4E795E1E49E737000DE69B /* AppDelegate.swift in Sources */,
-				2C4E79701E49E7B6000DE69B /* CustomCollectionViewController.swift in Sources */,
+				2C4E79701E49E7B6000DE69B /* SportsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +343,7 @@
 				2C4E796E1E49E737000DE69B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
