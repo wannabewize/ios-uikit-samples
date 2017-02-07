@@ -10,6 +10,15 @@ import UIKit
 
 class FlagCell: UICollectionViewCell {
     
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var nameLabel: UILabel!
+    override func awakeFromNib() {
+        print("awakeFromNib")
+        super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        print("prepareForReuse")
+    }
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
 }
