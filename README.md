@@ -66,9 +66,9 @@ iOS 10 Samples.
 
 ## 10_ListScene
 
-- BasicTable : 테이블뷰 기본
+- BasicTable : 테이블 뷰 기본
 - DynamicCellHeight : 셀 높이 동적 자동 설정
-- CellSelect : 테이블뷰 셀 선택
+- CellSelect : 테이블 뷰 셀 선택
 - TableEditing : 테이블뷰를 이용한 편집
 - CustomCell : 커스텀 셀
 - StaticCell : 정적 테이블뷰를 이용한 정적 테이블
@@ -79,6 +79,7 @@ iOS 10 Samples.
 ## 11_GridScene
 
 - CollectionView : 콜렉션 뷰
+- CollectionViewEdit : 콜렉션 뷰에서 수정(추가/이동)
 - CollectionViewCustomLayout : 커스텀 레이아웃을 적용한 콜렉션 뷰
 - TableAndCollectionView : 테이블 뷰 셀에 콜렉션 뷰 내장하기(작성 중)
 
