@@ -79,7 +79,10 @@ iOS 10 Samples.
 ## 11_GridScene
 
 - CollectionView : 콜렉션 뷰
+- CollectionViewByCode : 코드로 콜렉션 뷰 사용하기
 - CollectionViewEdit : 콜렉션 뷰에서 수정(추가/이동)
+- Countries : 헤더/푸터를 이용한 콜렉션 뷰
+- CollectionViewFlowLayout : 콜렉션 뷰의 플로우 레이아웃
 - CollectionViewCustomLayout : 커스텀 레이아웃을 적용한 콜렉션 뷰
 - TableAndCollectionView : 테이블 뷰 셀에 콜렉션 뷰 내장하기(작성 중)
 
@@ -88,6 +91,7 @@ iOS 10 Samples.
 - ViewAnimation : 뷰 속성 변화를 이용한 애니메이션
 - Transition : 트랜지션
 - Touch : 터치를 이용한 이미지 끌기 예제
+- ResponderChain : 리스폰더 체인 경험하기
 - Gesture : 제스처 인식기를 이용한 이미지 끌기, 회전, 확대/축소 예제
 - PanAndSwipeGesture : Pan, Swift 제스처 인식기와 제스처 상태값
 - TouchAndGesture : 제스처 인식기와 터치 API 사용 설정
