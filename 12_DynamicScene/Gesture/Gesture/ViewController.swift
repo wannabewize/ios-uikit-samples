@@ -12,16 +12,16 @@ class ViewController: UIViewController {
         
         imageView.isUserInteractionEnabled = true
         
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
         imageView.addGestureRecognizer(pinchGesture)
         
-        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotate(_:)))
+        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotate))
         imageView.addGestureRecognizer(rotateGesture)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         imageView.addGestureRecognizer(tapGesture)
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         imageView.addGestureRecognizer(panGesture)
         
         let edgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenPan))
@@ -30,13 +30,24 @@ class ViewController: UIViewController {
     }
     
     func handleScreenPan(_ gesture : UIScreenEdgePanGestureRecognizer) {
-        print("Screen pan")
+        print("Screen pan - velocity")
     }
     
     func handlePinch(_ gesture : UIPinchGestureRecognizer) {
         let scale = gesture.scale
         
         imageView.transform = imageView.transform.scaledBy(x: scale, y: scale)
+        
+        switch gesture.state {
+        case .began:
+            print("확대/축소 제스처 시작")
+        case .changed:
+            print("확대/축소 중")
+        case .ended:
+            print("확대/축소 끝")
+        default:
+            print("그외")
+        }
 
         
         // 연속된 제스처 이벤트이므로 다시 초기화
