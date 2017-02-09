@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         newView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
         
         // 뷰 전환
-        UIView.transition(with:containerView, duration: 1.0, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
+        UIView.transition(with:containerView, duration: 1.0, options: [.transitionCrossDissolve], animations: { () -> Void in
             
             self.currentView.removeFromSuperview()
             self.containerView.addSubview(newView)
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         
         newView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
         
-        UIView.transition(from: currentView, to: newView, duration: 1.0, options: .transitionFlipFromTop) { (finished) in
+        UIView.transition(from: currentView, to: newView, duration: 1.0, options: [.transitionFlipFromTop]) { (finished) in
             self.currentView = newView
             print("Transition Done ", finished)
         }
