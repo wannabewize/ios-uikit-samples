@@ -36,11 +36,12 @@ class MyView: UIView {
     
     override func draw(_ rect: CGRect) {
         print("draw rect works")
-        let str : NSString = "글자 그리기"
+        let str = "글자 그리기"
         
         let attr = [NSForegroundColorAttributeName:UIColor.red,
                     NSFontAttributeName:UIFont.systemFont(ofSize: 30)]
-        str.draw(at: CGPoint(x:10, y:10), withAttributes: attr)
+        
+        (str as NSString).draw(at: CGPoint(x:10, y:10), withAttributes: attr)
         
         if let image = UIImage(named: "image.jpg") {
             image.draw(in: CGRect(x: 10, y: 50, width: image.size.width, height: image.size.height))

@@ -12,8 +12,7 @@ class DrawingView: UIView {
     override func draw(_ rect: CGRect) {
         UIColor.blue.setStroke()
         
-        let path = UIBezierPath()
-        
+        let path = UIBezierPath()        
         
         path.lineWidth = 10
         path.lineCapStyle = .round
@@ -21,8 +20,9 @@ class DrawingView: UIView {
         path.move(to: CGPoint(x:20, y:20))
         path.addLine(to: CGPoint(x: 100, y: 100))
         path.addLine(to: CGPoint(x: 200, y: 20))
-    
         path.stroke()
+
+    
         
         // 파란선, 노란색 채우기
         UIColor.blue.setStroke()
@@ -34,9 +34,12 @@ class DrawingView: UIView {
         
         // 둥근 사각형
         let roundRectPath = UIBezierPath(roundedRect: CGRect(x: 120, y: 120, width: 110, height: 110), cornerRadius: 10)
+        roundRectPath.lineWidth = 4
         // 선그리고 내부 칠하기
         roundRectPath.stroke()
         roundRectPath.fill()
+        
+
         
         let endX = self.frame.size.width - 10
         
