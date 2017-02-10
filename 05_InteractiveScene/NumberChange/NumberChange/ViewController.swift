@@ -18,14 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     
     // 스테퍼 변경
-    @IBAction func stepperChanged(_ sender: AnyObject) {
+    @IBAction func stepperChanged(_ sender: Any) {
         let v = Int(stepper.value)
         label.text = "\(v)"
         slider.value = Float(v)
     }
     
     // 슬라이더 변경
-    @IBAction func sliderChanged(_ sender: AnyObject) {
+    @IBAction func sliderChanged(_ sender: Any) {
         let v = Int(slider.value)
         label.text = "\(v)"
         slider.value = Float(v)
