@@ -7,6 +7,11 @@ import UIKit
 
 class ViewController: UIViewController, ModalActionDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "MainScene"
+    }
+        
     // 모달 동작의 델리게이트 메소드 구현
     func completeModalAction(_ data: String!) {
         print("모달 동작 완료 : \(data)")
@@ -35,7 +40,9 @@ class ViewController: UIViewController, ModalActionDelegate {
         vc.delegate = self
         // 데이터 전달
         vc.data = textField.text
-        self.present(vc, animated: true)
+        self.present(vc, animated: true) { 
+            print("Presented : \(self.presentedViewController!.title)")
+        }
     }
 }
 

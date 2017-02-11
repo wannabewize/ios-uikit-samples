@@ -22,6 +22,11 @@ class ModalViewController: UIViewController {
         textField.text = data
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // 뷰가 나타난 이후에 접근 가능
+        print("Presented : \(self.presentingViewController!.title)")
+    }
+    
     // 완료 버튼 누르면 - 모달 종료
     @IBAction func handleDone(_ sender: Any) {
         // 델리게이트에게 내용 전달
@@ -37,6 +42,11 @@ class ModalViewController: UIViewController {
 
     // 키보드 감추기 - Did End On Exit 이벤트 연결
     @IBAction func textfieldDidEndOnExit(_ sender: AnyObject) {
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "ModalScene"
     }
 
 }
