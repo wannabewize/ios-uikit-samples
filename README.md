@@ -106,6 +106,7 @@ iOS 10 Samples.
 
 ## 14_AppArchitecture
 
+- AppState : 앱의 상태 변화
 - SceneChange : 스토리보드 다루기. Window의 RootViewController를 이용한 씬 전환.
 - TodoWithMVC : MVC를 적용한 할일 관리. TodoManager 모델
 
