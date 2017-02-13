@@ -9,7 +9,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var toolbar: UIToolbar!
     
-    var data = ["1","2","3","4","5"]
+    var data = ["item-1","item-2","item-3","item-4","item-5", "item-6", "item-7"]
     
     @IBAction func editList(_ sender: UIBarButtonItem) {
         tableView.setEditing(!tableView.isEditing, animated: true)
@@ -66,6 +66,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.toolbar.items?.append(editButton)
         
         self.toolbar.items?.append(self.editButtonItem)
+    }
+    @IBAction func selectionModeChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.tableView.allowsSelectionDuringEditing = false
+        }
+        else if sender.selectedSegmentIndex == 1 {
+            self.tableView.allowsSelectionDuringEditing = true
+            self.tableView.allowsMultipleSelectionDuringEditing = false
+        }
+        else if sender.selectedSegmentIndex == 2 {
+            self.tableView.allowsMultipleSelectionDuringEditing = true
+        }
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
