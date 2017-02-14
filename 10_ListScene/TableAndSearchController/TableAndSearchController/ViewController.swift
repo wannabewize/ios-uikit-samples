@@ -64,19 +64,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
     }
     
-    // 검색 버튼
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBarSearchButtonClicked")
-        searchBar.resignFirstResponder()
-        
-        searchResult.removeAll()
-        
-        if let keyword = searchBar.text {
-            searchItem(keyword)
-            tableView.reloadData()
-        }
-    }
-    
     func searchItem(_ keyword : String) {
         searchResult = data.filter { (item) in
             return item.range(of: keyword) != nil
@@ -112,7 +99,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         searchController.dimsBackgroundDuringPresentation = true
         
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
