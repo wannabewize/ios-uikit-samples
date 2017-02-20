@@ -91,14 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage
             
             // 최종 사용할 이미지
-            var useImage : UIImage!
-            
-            if nil == editedImage {
-                useImage = originalImage
-            }
-            else {
-                useImage = editedImage!
-            }
+            let useImage = editedImage ?? originalImage
             
             // 카메라 촬영 모드면 저장
             if picker.sourceType == .camera {
