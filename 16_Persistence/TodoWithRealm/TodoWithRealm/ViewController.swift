@@ -28,6 +28,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // 할일 삭제
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         TodoManager.shared.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    @IBAction func handleRefresh() {
+        TodoManager.shared.resolveAll()
+        tableView.reloadData()
     }
     
     // 모델 추가 알림 다루기

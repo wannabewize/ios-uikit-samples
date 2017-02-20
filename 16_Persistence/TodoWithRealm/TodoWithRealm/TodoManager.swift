@@ -15,6 +15,15 @@ class TodoManager {
     static let DeleteNotification = Notification.Name("TodoDeleteNotification")
     
     static let shared = TodoManager()
+    
+    var realm : Realm!
+    var realmNotiToken : NotificationToken!
+    private init() {
+        realm = try! Realm()
+        realmNotiToken = realm.addNotificationBlock { (noti : Realm.Notification, realm : Realm) in
+            print("change! : \(noti)")
+        }
+    }
 
     var todoList = [Todo]()
     
@@ -29,7 +38,6 @@ class TodoManager {
         todo.dueDate = dueDate
 
         do {
-            let realm = try Realm()
             try realm.write {
                 realm.add(todo)
             }
@@ -45,24 +53,22 @@ class TodoManager {
     }
     
     func resolveAll() {
-        let realm = try! Realm()
-        let todos = realm.objects(Todo.self).sorted(byProperty: "dueDate", ascending: true)
-        
+        let todos = realm.objects(Todo.self).sorted(byKeyPath: "dueDate", ascending: true)
+        let token = todos.addNotificationBlock { (change : RealmCollectionChange<Results<Todo>>) in
+            print("todos list change : \(change)")
+        }
         self.todoList = Array<Todo>(todos)
     }
     
     // 할일 삭제
     func remove(at index : Int) {
         let todo = todoList[index]
-        
+        todoList.remove(at: index)
+        print("todoList remove")
         do {
-            let realm = try Realm()
             try realm.write {
                 realm.delete(todo)
             }
-            
-            // 모델 변경을 컨트롤러에게 알림
-            NotificationCenter.default.post(name: TodoManager.DeleteNotification, object: nil, userInfo:["INDEX":index])
         }
         catch let error {
             print("remove Todo Error : ", error)
