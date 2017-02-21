@@ -121,6 +121,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, UITable
         
         if let v = info["MPMusicPlayerControllerPlaybackStateKey"] as? Int,
             let state = MPMusicPlaybackState(rawValue: v) {
+            print("state from noti : \(state.rawValue), player : \(player.playbackState.rawValue)")
             switch state {
             case .stopped, .paused:
                 if timer != nil {
