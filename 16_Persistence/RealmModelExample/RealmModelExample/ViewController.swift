@@ -39,16 +39,125 @@ class Engine : Object {
     dynamic var car : Car?
 }
 
+
+
 class Todo : Object {
     dynamic var title = ""
+    dynamic var category : Category?
 }
 
 class Category : Object {
     dynamic var name = ""
+    let todos = List<Todo>()
+}
+
+class Country : Object {
+    dynamic var name : String = ""
+    dynamic var capital : Capital?
+}
+
+class Capital : Object {
+    dynamic var name : String = ""
+    let country = LinkingObjects(fromType: Country.self, property: "capital")
+}
+
+class Member : Object {
+    dynamic var name = ""
+    convenience init(name : String) {
+        self.init()
+        self.name = name
+    }
+    
+    let group = LinkingObjects(fromType: Group.self, property: "members")
+}
+
+class Group : Object {
+    dynamic var name = ""
+    let members = List<Member>()
+    
+    convenience init(name : String) {
+        self.init()
+        self.name = name
+    }
 }
 
 class ViewController: UIViewController {
     var realm : Realm!
+    
+    func saveToMany() {
+        let category = Category()
+        category.name = "iOS Study"
+        
+        let todo1 = Todo()
+        todo1.title = "UIKit study"
+        
+        let todo2 = Todo()
+        todo2.title = "Network"
+        
+        todo1.category = category
+        todo2.category = category
+        
+        category.todos.append(todo1)
+        category.todos.append(todo2)
+        
+        try! realm.write {
+            realm.add(category)
+            realm.add(todo1)
+            realm.add(todo2)
+            print("Writing ToMany Relation success")
+        }
+    }
+     func readToMany() {
+        let ret = realm.objects(Category.self)
+        let category = ret.last!
+        print("Category : \(category.name) - Todos : \(category.todos[0].title), \(category.todos[1].title)")
+        print("Todo's Relation : \(category.todos[0].category)")
+    }
+    
+    func saveToOneInverse() {
+        let korea = Country()
+        korea.name = "Korea"
+        
+        let seoul = Capital()
+        seoul.name = "Seoul"
+        
+        korea.capital = seoul
+        
+        try! realm.write {
+            realm.add(korea)
+            realm.add(seoul)
+        }
+    }
+    
+    func readToOneInverse() {
+        if let capital = realm.objects(Capital.self).last {
+           print("Capital name : \(capital.name) - Country : \(capital.country.first!.name)")
+        }
+    }
+    
+    func saveToManyInvese() {
+        let mamamoo = Group(name: "마마무")
+        
+        let sola = Member(name: "솔라")
+        let munbyul = Member(name: "문별")
+        
+        mamamoo.members.append(sola)
+        mamamoo.members.append(munbyul)
+        
+        try! realm.write {
+            realm.add(mamamoo)
+            realm.add(sola)
+            realm.add(munbyul)
+        }
+    }
+    
+    func readToManyInverse() {
+        if let group = realm.objects(Group.self).last,
+            let munbyul = realm.objects(Member.self).filter("name == %@", "문별").last {
+            print("Group : \(group.name), Members : \(group.members[0].name), \(group.members[1].name)")
+            print("Member : \(munbyul.name) group : \(munbyul.group.first?.name)")
+        }
+    }
     
     func saveToOneModel() {
         let car = Car()
@@ -58,7 +167,7 @@ class ViewController: UIViewController {
         engine.type = "MR"
         
         // 관계
-//        car.engine = engine
+        car.engine = engine
         engine.car = car
         
         try! realm.write {
@@ -112,13 +221,18 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //        saveModel()
-        //        readModel()
-        
+//        saveModel()
+//        readModel()
 //        saveOptionalModel()
 //        readOptionalModel()
-        saveToOneModel()
-        readToOneModel()
+//        saveToOneModel()
+//        readToOneModel()
+//        saveToMany()
+//        readToMany()
+        saveToOneInverse()
+        readToOneInverse()
+//        saveToManyInvese()
+//        readToManyInverse()
     }
     
     override func viewDidLoad() {
