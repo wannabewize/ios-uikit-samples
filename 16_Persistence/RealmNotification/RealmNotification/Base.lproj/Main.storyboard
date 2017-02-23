@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Ra-ID-WqD">
+                                <rect key="frame" x="67.5" y="40" width="240" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-1V-Y2b" userLabel="Add Zero">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="Add zero"/>
+                                        <connections>
+                                            <action selector="addModel" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8v-Ty-jPw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-UC-ZUx">
+                                        <rect key="frame" x="70" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Refresh"/>
+                                        <connections>
+                                            <action selector="readLastModel" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNM-aJ-wu7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T92-Kb-l73">
+                                        <rect key="frame" x="131" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="Increase"/>
+                                        <connections>
+                                            <action selector="changeValue" destination="BYZ-38-t0r" eventType="touchUpInside" id="DzU-NR-mXX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOt-l7-8xS">
+                                        <rect key="frame" x="198" y="0.0" width="42" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Notification logs" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-vU-o0c">
+                                <rect key="frame" x="16" y="78" width="343" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EKO-vU-o0c" firstAttribute="top" secondItem="0Ra-ID-WqD" secondAttribute="bottom" constant="8" id="00f-oY-Txn"/>
+                            <constraint firstItem="EKO-vU-o0c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Yr-8o-dlm"/>
+                            <constraint firstItem="0Ra-ID-WqD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8KQ-5w-WXD"/>
+                            <constraint firstItem="0Ra-ID-WqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O2C-Xy-ClU"/>
+                            <constraint firstItem="EKO-vU-o0c" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="l5f-Yd-4Br"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EKO-vU-o0c" secondAttribute="bottom" id="lFb-2U-Htp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="lOt-l7-8xS" id="YbC-ZP-dAI"/>
+                        <outlet property="textView" destination="EKO-vU-o0c" id="goP-h8-B33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333.60000000000002" y="156.97151424287858"/>
+        </scene>
+    </scenes>
+</document>
