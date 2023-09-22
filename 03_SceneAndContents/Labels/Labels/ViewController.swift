@@ -53,10 +53,10 @@ class ViewController: UIViewController {
         // 속성 문자열
         let attributedStr = NSMutableAttributedString(string: "Attributed Text")
         // 속성 문자열의 속성 설정
-        attributedStr.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 30), range: NSMakeRange(1, 3))
+        attributedStr.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 30), range: NSMakeRange(1, 3))
         let font = UIFont(name: "Marker Felt", size: 25)!
-        attributedStr.addAttribute(NSFontAttributeName, value: font, range: NSMakeRange(11, 4))
-        attributedStr.addAttributes([NSForegroundColorAttributeName:UIColor.red, NSFontAttributeName:UIFont.systemFont(ofSize: 25)], range: NSMakeRange(7, 3))
+        attributedStr.addAttribute(NSAttributedString.Key.font, value: font, range: NSMakeRange(11, 4))
+        attributedStr.addAttributes([NSAttributedString.Key.foregroundColor:UIColor.red, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 25)], range: NSMakeRange(7, 3))
         // 레이블 생성과 속성 문자열 설정
         let attributedTextLabel = UILabel(frame: CGRect(x: 50, y: 400, width: 200, height: 40))
         attributedTextLabel.attributedText = attributedStr
