@@ -39,7 +39,8 @@ class ViewController: UIViewController {
         // 뷰의 위치와 크기
         greenView.frame.origin = CGPoint(x: 50, y: 200)
         greenView.frame.size = CGSize(width: 200, height: 200)
-        greenView.backgroundColor = UIColor(colorLiteralRed: 0, green: 1, blue: 0, alpha: 0.7)
+        greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1.0)
+        // 투명도 변경
         greenView.alpha = 0.7
     }
 }

@@ -27,11 +27,7 @@ class ViewController: UIViewController {
         if let blueView = self.view.viewWithTag(99) {
             blueView.backgroundColor = UIColor.gray
         }
-        
-        
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +37,6 @@ class ViewController: UIViewController {
         redView.backgroundColor = UIColor.red
         self.view.addSubview(redView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
