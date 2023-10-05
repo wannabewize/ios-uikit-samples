@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             print("keyboard height", keyboardHeight)
             
             // 첫 키보드 알림 발생, 혹은 가로/세로 변경으로 키보드 높이가 다르면
-            if self.bottomConstraintForShow == nil || self.bottomConstraintForShow!.constant != keyboardHeight {
+            if self.bottomConstraintForShow == nil || self.bottomConstraintForShow!.constant != -keyboardHeight {
                 self.bottomConstraintForShow = self.textField.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -keyboardHeight)
             }
                         
