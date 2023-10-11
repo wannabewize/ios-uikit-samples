@@ -13,8 +13,7 @@ class BottomContentTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("super vc :", self.parent)
+    override func viewDidLayoutSubviews() {
         if let parentVC = parent as? ViewController {
             parentVC.bottomScrollable = self.tableView
         }
@@ -41,6 +40,8 @@ class BottomContentTableViewController: UITableViewController {
         if scrollView.contentOffset.y <= 0 {
             // bounce 효과 없앰.
             scrollView.contentOffset.y = 0
+            print("header sticky false")
+            
             (parent as? ViewController)?.isHeaderSticky = false
         }
     }

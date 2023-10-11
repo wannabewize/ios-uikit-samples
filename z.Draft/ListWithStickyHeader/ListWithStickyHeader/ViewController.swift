@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let stickyHeaderThreshold: CGFloat = 30
-
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var stickyHeader: UIView!
     @IBOutlet weak var topContainer: UIView!
@@ -22,12 +20,7 @@ class ViewController: UIViewController {
 
     var panGestureRecognizer: UIPanGestureRecognizer!
     
-    weak var bottomScrollable: UIScrollView? {
-        // 초기 뷰 로딩시 - 스크롤 막음
-        didSet {
-            bottomScrollable?.isScrollEnabled = false
-        }
-    }
+    weak var bottomScrollable: UIScrollView?
     
     var isHeaderSticky = false {
         didSet {
@@ -79,7 +72,9 @@ class ViewController: UIViewController {
         self.topContainerConstraint.constant = newTopContainerConstant
         self.headerConstraint.constant = newHeaderConstant
         
-        isHeaderSticky = headerConstraint.constant == 0
+        if newHeaderConstant == 0 && isHeaderSticky == false {
+            isHeaderSticky = true
+        }
     }
         
     override func viewDidLayoutSubviews() {
@@ -112,23 +107,5 @@ class ViewController: UIViewController {
         ])
 
         topContainerHeight = topContainer.frame.height
-    }
-}
-
-
-extension ViewController: UIScrollViewDelegate {
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if (stickerHeader.frame.minY-stickyHeaderThreshold...stickerHeader.frame.minY).contains(scrollView.contentOffset.y) && isHeaderSticky == false {
-//            print("make header stick")
-//            isHeaderSticky = true
-//        }
-//    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if (stickyHeader.frame.minY-stickyHeaderThreshold...stickyHeader.frame.minY).contains(scrollView.contentOffset.y) && isHeaderSticky == false {
-            print("make header stick")
-            isHeaderSticky = true
-        }
     }
 }
