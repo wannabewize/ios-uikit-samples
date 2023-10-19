@@ -32,8 +32,8 @@ class BasicTableViewController: UITableViewController {
     }
 }
 
-#Preview(traits: .defaultLayout, body: {
+#Preview {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let vc = storyboard.instantiateViewController(withIdentifier: "BasicTableScene")
     return vc
-})
+}

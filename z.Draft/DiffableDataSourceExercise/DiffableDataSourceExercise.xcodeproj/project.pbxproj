@@ -12,10 +12,10 @@
 		2C3172BD2ABC25F000E1D8F0 /* EditableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3172BC2ABC25F000E1D8F0 /* EditableTableViewController.swift */; };
 		2CE418582AB86C1100319DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE418572AB86C1100319DA2 /* AppDelegate.swift */; };
 		2CE4185A2AB86C1100319DA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE418592AB86C1100319DA2 /* SceneDelegate.swift */; };
-		2CE4185C2AB86C1100319DA2 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4185B2AB86C1100319DA2 /* BasicViewController.swift */; };
 		2CE4185F2AB86C1100319DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4185D2AB86C1100319DA2 /* Main.storyboard */; };
 		2CE418612AB86C1200319DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE418602AB86C1200319DA2 /* Assets.xcassets */; };
 		2CE418642AB86C1200319DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE418622AB86C1200319DA2 /* LaunchScreen.storyboard */; };
+		2CEBC16C2AE041C80079AFEA /* BasicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBC16B2AE041C80079AFEA /* BasicCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +25,12 @@
 		2CE418542AB86C1100319DA2 /* DiffableDataSourceExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffableDataSourceExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE418572AB86C1100319DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CE418592AB86C1100319DA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2CE4185B2AB86C1100319DA2 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		2CE4185E2AB86C1100319DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CE418602AB86C1200319DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE418632AB86C1200319DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CE418652AB86C1200319DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CEBC16A2AE035730079AFEA /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2CEBC16B2AE041C80079AFEA /* BasicCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +65,15 @@
 			children = (
 				2CE418572AB86C1100319DA2 /* AppDelegate.swift */,
 				2CE418592AB86C1100319DA2 /* SceneDelegate.swift */,
-				2CE4185B2AB86C1100319DA2 /* BasicViewController.swift */,
 				2C3172B82ABC185600E1D8F0 /* BasicTableViewController.swift */,
 				2C3172BA2ABC1D9A00E1D8F0 /* MultiSectionTableViewController.swift */,
 				2C3172BC2ABC25F000E1D8F0 /* EditableTableViewController.swift */,
+				2CEBC16B2AE041C80079AFEA /* BasicCollectionViewController.swift */,
 				2CE4185D2AB86C1100319DA2 /* Main.storyboard */,
 				2CE418602AB86C1200319DA2 /* Assets.xcassets */,
 				2CE418622AB86C1200319DA2 /* LaunchScreen.storyboard */,
 				2CE418652AB86C1200319DA2 /* Info.plist */,
+				2CEBC16A2AE035730079AFEA /* MyPlayground.playground */,
 			);
 			path = DiffableDataSourceExercise;
 			sourceTree = "<group>";
@@ -148,8 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3172BB2ABC1D9A00E1D8F0 /* MultiSectionTableViewController.swift in Sources */,
+				2CEBC16C2AE041C80079AFEA /* BasicCollectionViewController.swift in Sources */,
 				2C3172BD2ABC25F000E1D8F0 /* EditableTableViewController.swift in Sources */,
-				2CE4185C2AB86C1100319DA2 /* BasicViewController.swift in Sources */,
 				2CE418582AB86C1100319DA2 /* AppDelegate.swift in Sources */,
 				2C3172B92ABC185600E1D8F0 /* BasicTableViewController.swift in Sources */,
 				2CE4185A2AB86C1100319DA2 /* SceneDelegate.swift in Sources */,
